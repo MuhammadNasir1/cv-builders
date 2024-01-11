@@ -270,7 +270,7 @@ include("includes/navbar.php");
                   let newhob = document.createElement('div');
                   newhob.classList.add('row');
                   newhob.id = "hobyrem_" + hid;
-                  newhob.innerHTML = `
+                  newhob.innerHTML = ` 
                     <div class="py-3 mt-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                   <div class="my-3 position-relative">
                     <h5 class="headinf">Hobbies</h5>

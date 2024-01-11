@@ -25,7 +25,7 @@ include('./includes/navbar.php');
     <div class="heading">
       <h5><a href="index.php">HOME</a> /BLOG</h5>
       <h1>Contact Us</h1>
-    </div>
+    </div>  
   </div>
 </div>
 

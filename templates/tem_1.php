@@ -227,6 +227,10 @@
           </div>
           <div class="per-info">
             <div class="icon-sec">
+              <h5><i class="fa-solid fa-user"></i></h5>
+              <p><?= ucfirst($data->per_info->gender) ?> </p>
+            </div>
+            <div class="icon-sec">
               <h5><i class="fa-solid fa-envelope"></i></h5>
               <p><?= ucfirst($data->per_info->email) ?> </p>
             </div>

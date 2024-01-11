@@ -225,6 +225,10 @@
       <!-- conact us  -->
       <div class="conatct_us">
         <div class="call">
+          <div><i class="fa-solid fa-user"></i></div>
+          <div><span><?= ucfirst($data->per_info->gender) ?></span></div>
+        </div>
+        <div class="call">
           <div><i class="fa-solid fa-phone"></i></div>
           <div><span><?= ucfirst($data->per_info->per_no) ?></span></div>
         </div>

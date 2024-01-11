@@ -425,6 +425,13 @@
         </div>
         <!-- 1st div -->
         <div class="adress_main">
+          <div><i class="fa-solid fa-user icon"></i></div>
+          <div class="adress">
+            <span>Gender</span>
+            <p><?= ucfirst($data->per_info->gender) ?> </p>
+          </div>
+        </div>
+        <div class="adress_main">
           <div><i class="fa-solid fa-location-dot icon"></i></div>
           <div class="adress">
             <span>Adress</span>
