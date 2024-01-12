@@ -3,7 +3,7 @@ $title = "Information";
 include("./includes/db.php");
 
 if (@!$_SESSION['user_id']) {
-  header("location: index.php");
+  header("location: index");
 }
 
 
@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
   }
   $result = mysqli_query($conn, $sql);
   if ($result) {
-    header("location: edu_skill.php");
+    header("location: edu_skill");
   }
 }
 
@@ -71,16 +71,16 @@ include("./includes/navbar.php");
   <div class="progres-bar">
     <div class="progress-sec mt-4 ">
       <div class="progressbarss">
-        <a style="color: black;" href="./personal_info.php">
+        <a style="color: black;" href="./personal_info">
           <p class="text-dark"><span style="color:white;     background:#C21010;">1</span> <bdo class="form_progress_txt">Persanal Information</bdo></p>
         </a>
-        <a href="./edu_skill.php">
+        <a href="./edu_skill">
           <p><span>2</span> <bdo class="form_progress_txt">Education/Skill</bdo> </p>
         </a>
-        <a href="./work-exp.php">
+        <a href="./work-exp">
           <p><span>3</span> <bdo class="form_progress_txt">Working Experience</bdo></p>
         </a>
-        <a href="./hob_lan_ref.php">
+        <a href="./hob_lan_ref">
           <p><span>4</span> <bdo class="form_progress_txt">Languages/Reference </bdo></p>
         </a>
       </div>
@@ -207,7 +207,7 @@ include("./includes/navbar.php");
                     <label>Country</label>
                     <select class="country form-control " name="country" id="country" value="<?= @$per_det['country'] ?>">
                       <?php
-                      include_once('others/countrylist.php')
+                      include_once('others/countrylist')
                       ?>
                     </select>
                   </div>
@@ -231,7 +231,7 @@ include("./includes/navbar.php");
             </div>
             <!-- ============Save and Next============ -->
             <div class="form-buttons mt-4 d-flex justify-content-end me-4 ">
-              <a href="./edu_skill.php"><button type="submit" name="submit" class="btn   "><?= $buttontext ?></button></a>
+              <a href="./edu_skill"><button type="submit" name="submit" class="btn   "><?= $buttontext ?></button></a>
             </div>
           </div>
         </div>

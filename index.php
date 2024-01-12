@@ -28,13 +28,13 @@ include('includes/navbar.php')
 
             if (@$_SESSION["loginemail"]) {
             ?>
-              <a href="./templates.php"> <button>Show templates</button></a>
-              <a href="./personal_info.php"> <button class="cv-btn">Create Here</button></a>
+              <a href="./showtemplates"> <button>Show templates</button></a>
+              <a href="./personal_info"> <button class="cv-btn">Create Here</button></a>
             <?php
             } else {
             ?>
-              <a href="./sign_up.php"> <button>Show templates</button></a>
-              <a href="./sign_up.php"> <button class="cv-btn">Create Here</button></a>
+              <a href="./sign_up"> <button>Show templates</button></a>
+              <a href="./sign_up"> <button class="cv-btn">Create Here</button></a>
             <?php
             }
             ?>
@@ -127,12 +127,12 @@ include('includes/navbar.php')
       <?php
       if (@$_SESSION["loginemail"]) {
       ?>
-        <a href="./personal_info.php"> <button class="btn mt-3">Create</button></a>
+        <a href="./personal_info"> <button class="btn mt-3">Create</button></a>
 
       <?php
       } else {
       ?>
-        <a href="./sign_up.php"> <button class="btn mt-3">Create</button></a>
+        <a href="./sign_up"> <button class="btn mt-3">Create</button></a>
       <?php
       }
       ?>
@@ -276,13 +276,13 @@ include('includes/navbar.php')
             <?php
             if (@$_SESSION["loginemail"]) {
             ?>
-              <a href="./personal_info.php"> <button class="">Create your Cv</button></a>
+              <a href="./personal_info"> <button class="">Create your Cv</button></a>
 
             <?php
             } else {
 
             ?>
-              <a href="./sign_up.php"> <button class="">Create your Cv</button></a>
+              <a href="./sign_up"> <button class="">Create your Cv</button></a>
             <?php
             }
             ?>
@@ -344,7 +344,7 @@ if (@$_SESSION["loginemail"]) {
         <h1 style=" cursor: pointer;" class="float-end text-gray" data-bs-dismiss="modal" aria-label="Close"><i class='bx bx-x'></i></h1>
         <h2 class="mt-4">SIGN UP <span style="color:black" ;>Free</span></h2>
         <p class="mt-2">Sign in or Sign up now and create your professional CV or Resume in an easy way.</p>
-        <center><a href="./sign_in.php "><button>SIGN IN</button></a></center>
+        <center><a href="./sign_in "><button>SIGN IN</button></a></center>
       </div>
 
     </div>

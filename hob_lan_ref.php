@@ -3,7 +3,7 @@ $title = "Information";
 include('includes/db.php');
 
 if (!$_SESSION['user_id']) {
-  header("location: index.php");
+  header("location: index");
 }
 
 
@@ -101,7 +101,7 @@ if (isset($_POST['submit'])) {
 
 
   if ($result1) {
-    header("location: getdata.php");
+    header("location: getdata");
   } else {
     echo "Error: " . mysqli_error($conn);
   }
@@ -124,21 +124,21 @@ if (@$_REQUEST['delh']) {
   $del_id  = $_REQUEST['delh'];
   $re = mysqli_query($conn, "DELETE FROM `hobbies` WHERE  hobbies_id =  $del_id");
   if ($re) {
-    header('location:hob_lan_ref.php ');
+    header('location:hob_lan_ref ');
   }
 }
 if (@$_REQUEST['dellan']) {
   $del_id  = $_REQUEST['dellan'];
   $re = mysqli_query($conn, "DELETE FROM `languages` WHERE  lang_id =  $del_id");
   if ($re) {
-    header('location:hob_lan_ref.php ');
+    header('location:hob_lan_ref ');
   }
 }
 if (@$_REQUEST['delref']) {
   $del_id  = $_REQUEST['delref'];
   $re = mysqli_query($conn, "DELETE FROM `user_references` WHERE  ref_id =  $del_id");
   if ($re) {
-    header('location:hob_lan_ref.php ');
+    header('location:hob_lan_ref ');
   }
 }
 
@@ -161,17 +161,17 @@ include("includes/navbar.php");
   <div class="progres-bar">
     <div class="progress-sec mt-4">
       <div class="progressbarss">
-        <a style="color: black;" href="./personal_info.php">
+        <a style="color: black;" href="./personal_info">
           <p><span style="color:white; border-color:green;     background:green;">1</span> <bdo class="form_progress_txt">Persanal Information</bdo></p>
         </a>
-        <a style="color: black;" href="./edu_skill.php">
+        <a style="color: black;" href="./edu_skill">
           <p><span style="color:white; border-color:green;     background:green;">2</span> <bdo class="form_progress_txt">Education/Skills</bdo></p>
         </a>
-        <a style="color: black;" href="./work-exp.php">
+        <a style="color: black;" href="./work-exp">
           <p><span style="color:white; border-color:green;     background:green;">3</span><bdo class="form_progress_txt">Working Experience</bdo> </p>
         </a>
 
-        <a style="color: black;" href="./hob_lan_ref.php">
+        <a style="color: black;" href="./hob_lan_ref">
           <p><span style="color:white;     background:#C21010;">4</span> <bdo class="form_progress_txt">Languages/Reference</bdo></p>
         </a>
 
@@ -200,7 +200,7 @@ include("includes/navbar.php");
                   <div class="py-3 mt-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                     <div class="my-3 position-relative">
                       <h5 class="headinf">Hobby</h5>
-                      <a href="hob_lan_ref.php?delh=<?= $dta['hobbies_id'] ?>">
+                      <a href="hob_lan_ref?delh=<?= $dta['hobbies_id'] ?>">
                         <h5 class="position-absolute" style="right: 20px; top:-8px; cursor: pointer;"><i style="color:#c21010;" class="fa-solid fa-x"></i></h5>
                       </a>
                     </div>
@@ -302,7 +302,7 @@ include("includes/navbar.php");
                     <div class="py-3 mt-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                       <div class="my-3 position-relative">
                         <h5 class="headinf">Language</h5>
-                        <a href="hob_lan_ref.php?dellan=<?= $data['lang_id'] ?>">
+                        <a href="hob_lan_ref?dellan=<?= $data['lang_id'] ?>">
                           <h5 class="position-absolute" style="right: 20px; top:-8px; cursor: pointer; "><i style="color:#c21010;" class="fa-solid fa-x"></i></h5>
                         </a>
                       </div>
@@ -422,7 +422,7 @@ include("includes/navbar.php");
                   <div class="py-3 mt-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                     <div class="my-3 position-relative">
                       <h5 class="headinf">Reference</h5>
-                      <a href="hob_lan_ref.php?delref=<?= $row['ref_id'] ?>">
+                      <a href="hob_lan_ref?delref=<?= $row['ref_id'] ?>">
                         <h5 class="position-absolute" style="right: 20px; top:-8px; cursor: pointer; "><i style="color:#c21010;" class="fa-solid fa-x"></i></h5>
                       </a>
                     </div>
@@ -510,7 +510,7 @@ include("includes/navbar.php");
 
               <div class="col-12  " style="margin-top: 100px;">
                 <div class="form-buttons mt-4">
-                  <a href="./work-exp.php"> <button type="button" class="btn btn-danger btnPrevious add-det-btn">Previous</button></a>
+                  <a href="./work-exp"> <button type="button" class="btn btn-danger btnPrevious add-det-btn">Previous</button></a>
                   <button type="submit" name="submit" class="btn btn-danger float-end save-btn btnNext add-det-btn">Finish</button>
                 </div>
               </div>

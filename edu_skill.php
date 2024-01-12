@@ -3,7 +3,7 @@ $title = "Information";
 include("includes/db.php");
 
 if (!$_SESSION['user_id']) {
-  header("location: index.php");
+  header("location: index");
 }
 
 
@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
         $sql = "INSERT INTO `education`(`user_id`,`instutute_name`, `dagree`, `total_marks`, `obtain_marks`,  `deg_st_date`, `deg_end_date`, `field` , `edu_present`) VALUES ('" . $_SESSION['user_id'] . "', '$institute_name','$degree','$total_mark','$ob_mark','$edu_st_date','$edu_end_date','$edu_field' , '$present')";
         $result = mysqli_query($conn, $sql);
         if ($result) {
-          header('location: ./work-exp.php');
+          header('location: ./work-exp');
         }
       }
     }
@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
     }
 
     if ($result) {
-      header('location: work-exp.php');
+      header('location: work-exp');
     } else {
       echo "Error: " . mysqli_error($conn);
     }
@@ -97,7 +97,7 @@ if (@$_REQUEST['del']) {
   $del_id  = $_REQUEST['del'];
   $re = mysqli_query($conn, "DELETE FROM `education` WHERE  edu_id =  $del_id");
   if ($re) {
-    header('location:edu_skill.php ');
+    header('location:edu_skill ');
   }
 }
 
@@ -105,7 +105,7 @@ if (@$_REQUEST['delete']) {
   $del_id  = $_REQUEST['delete'];
   $re = mysqli_query($conn, "DELETE FROM `skills` WHERE  skill_id =  $del_id");
   if ($re) {
-    header('location:edu_skill.php ');
+    header('location:edu_skill ');
   }
 }
 
@@ -125,17 +125,17 @@ include("./includes/navbar.php");
   <div class="progres-bar">
     <div class="progress-sec mt-4">
       <div class="progressbarss">
-        <a style="color: black;" href="./personal_info.php">
+        <a style="color: black;" href="./personal_info">
           <p><span style="color:white; border-color:green;     background:green;">1</span> <bdo class="form_progress_txt">Persanal Information</bdo></p>
         </a>
-        <a style="color: black;" href="./edu_skill.php">
+        <a style="color: black;" href="./edu_skill">
           <p><span style="color:white;     background:#C21010;">2</span> <bdo class="form_progress_txt">Education/Skills</bdo></p>
         </a>
 
-        <a href="./work-exp.php">
+        <a href="./work-exp">
           <p><span>3</span><bdo class="form_progress_txt">Working Experience</bdo> </p>
         </a>
-        <a href="./hob_lan_ref.php">
+        <a href="./hob_lan_ref">
           <p><span>4</span><bdo class="form_progress_txt">Languages/Reference </bdo></p>
         </a>
 
@@ -164,7 +164,7 @@ include("./includes/navbar.php");
                     <div class=" py-2 mt-3" id="addeduction" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                       <div class="my-3 position-relative">
                         <h5 class="headinf">Education</h5>
-                        <a href="edu_skill.php?del=<?= $dta['edu_id'] ?>">
+                        <a href="edu_skill?del=<?= $dta['edu_id'] ?>">
                           <h5 class="position-absolute" style="right: 20px; top:-8px; cursor: pointer;"><i style="color:#c21010;" class="fa-solid fa-x"></i></h5>
                         </a>
                       </div>
@@ -433,7 +433,7 @@ include("./includes/navbar.php");
                       <div class="personal-info-form  py-3 ">
                         <div class="my-3 position-relative">
                           <h5 class="headinf">Skill</h5>
-                          <a href="edu_skill.php?delete=<?= $row['skill_id'] ?>">
+                          <a href="edu_skill?delete=<?= $row['skill_id'] ?>">
                             <h5 class="position-absolute" style="right: 20px; top:-8px; cursor: pointer;"><i style="color:#c21010;" class="fa-solid fa-x"></i></h5>
                           </a>
                         </div>
@@ -571,9 +571,9 @@ include("./includes/navbar.php");
 
                 <div class="col-12  " style="margin-top: 100px;">
                   <div class="form-buttons mt-4">
-                    <a href="./personal_info.php"> <button type="button" class="btn btn-danger btnPrevious add-det-btn">Previous</button></a>
+                    <a href="./personal_info"> <button type="button" class="btn btn-danger btnPrevious add-det-btn">Previous</button></a>
 
-                    <a href="./work-exp.php"> <button type="submit" name="submit" class="btn btn-danger float-end save-btn btnNext add-det-btn"><?= $buttontext ?></button></a>
+                    <a href="./work-exp"> <button type="submit" name="submit" class="btn btn-danger float-end save-btn btnNext add-det-btn"><?= $buttontext ?></button></a>
                   </div>
                 </div>
               </div>

@@ -4,7 +4,7 @@ include('includes/header.php');
 include('includes/db.php');
 
 if (!$_SESSION['user_id']) {
-  header("location: index.php");
+  header("location: index");
 }
 
 
@@ -32,7 +32,7 @@ $r = mysqli_query($conn, $q);
   <?php
   if ($row < 1) {
   ?>
-    <a href="./personal_info.php" class="text-decoration-none"> <button class=" edit-details-btn me-3"> <i class='bx bxs-pencil'></i> <span class="ms-1">Create Cv</span></button></a>
+    <a href="./personal_info" class="text-decoration-none"> <button class=" edit-details-btn me-3"> <i class='bx bxs-pencil'></i> <span class="ms-1">Create Cv</span></button></a>
 
   <?php
   }
@@ -52,11 +52,11 @@ $r = mysqli_query($conn, $q);
         <?php
         if ($row < 1) {
         ?>
-          <a href="./personal_info.php">
+          <a href="./personal_info">
           <?php
         } else {
           ?>
-            <a href="getdata.php?pre=<?= $a ?>">
+            <a href="getdata?pre=<?= $a ?>">
             <?php
           }
             ?>

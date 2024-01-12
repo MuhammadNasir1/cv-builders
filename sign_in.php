@@ -25,13 +25,13 @@ if (isset($_REQUEST['submit'])) {
                  <span class="email">' . $_SESSION["email"] . '</span></span></p>
            </li>
            <li>
-             <p><a href="logout.php"><i class="bx bx-log-out"></i> LOGOUT</a></p>
+             <p><a href="logout"><i class="bx bx-log-out"></i> LOGOUT</a></p>
            </li>
 
          </ul>
        
      </div>';
-    header('location: ./index.php');
+    header('location: ./index');
   } else {
     $input_red = 'style="border-color:#C21010"';
     $showerror = "Email  not match";
@@ -56,7 +56,7 @@ if (isset($_REQUEST['submit'])) {
           <div class="sign-txt">
             <h4 class="form-heading">Sign in</h4>
             <h3>If you Don't have an account</h3>
-            <h3>You Can <a href="./sign_up.php">Register here !</a></h3>
+            <h3>You Can <a href="./sign_up">Register here !</a></h3>
           </div>
           <!-- ==========form-start=========== -->
           <div class="form-section">
@@ -80,7 +80,6 @@ if (isset($_REQUEST['submit'])) {
                 </div>
                 <div class="check-box mb-4">
                   <input class="checkbox" type="checkbox" name="" id=""> <span>Rememebr me</span>
-                  <!-- <a href="./forgot_Password.php">Forgot Password ?</a> -->
                 </div>
                 <button name="submit" type="submit" class="btn btn-primary">Sign In</button>
               </form>

@@ -50,7 +50,7 @@
           <h6 class="text-uppercase fw-bold">Useful links</h6>
           <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 80px; background-color:#C21010 ; height: 5px" />
           <p>
-            <a href="./contact.php" class="text-white">Contact Us</a>
+            <a href="./contact" class="text-white">Contact Us</a>
           </p>
           <p>
             <?php
@@ -61,13 +61,13 @@
             <?php
             } else {
             ?>
-              <a href="./sign_up.php" class="text-white">Settings</a>
+              <a href="./sign_up" class="text-white">Settings</a>
             <?php
 
             } ?>
           </p>
           <p>
-            <a href="./privacypolicy.php" class="text-white">Privacy & Policy</a>
+            <a href="./privacypolicy" class="text-white">Privacy & Policy</a>
           </p>
 
         </div>

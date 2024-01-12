@@ -28,7 +28,7 @@ if (isset($_REQUEST['submit'])) {
       <script>
         setTimeout(() => {
           console.log("hello word");
-          window.location.href = "sign_in.php";
+          window.location.href = "sign_in";
         }, 1000);
       </script>
 <?php
@@ -63,7 +63,7 @@ if (isset($_REQUEST['submit'])) {
           <div class="sign-txt signup-txt">
             <h4 class="signup-heading">Sign Up</h4>
             <h3>If you have an account</h3>
-            <h3>You Can <a href="./sign_in.php">login here !</a></h3>
+            <h3>You Can <a href="./sign_in">login here !</a></h3>
           </div>
           <!-- ==========form-start=========== -->
           <div class="form-section">

@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
   $sql = "INSERT INTO `enquiries`(`name`, `email`, `message`) VALUES ('$fname','$email','$message')";
   $res = mysqli_query($conn, $sql);
   if ($res) {
-    header("location: ./contact.php");
+    header("location: ./contact");
   }
 }
 include("./includes/header.php");
@@ -23,9 +23,9 @@ include('./includes/navbar.php');
 <div class="container-fluid p-0 pt-1">
   <div class="blog-heading-img ">
     <div class="heading">
-      <h5><a href="index.php">HOME</a> /BLOG</h5>
+      <h5><a href="index">HOME</a> /BLOG</h5>
       <h1>Contact Us</h1>
-    </div>  
+    </div>
   </div>
 </div>
 
@@ -42,13 +42,16 @@ include('./includes/navbar.php');
           <div class="heading">
             <h3>For Enquiries</h3>
           </div>
-          <div class="input-sec mt-3">
+          <div class="input-field mt-3">
+          <label>Name</label>
             <input type="text" name="fullnname" class="form-control" placeholder="Name" required>
           </div>
-          <div class="input-sec mt-3">
+          <div class="input-field mt-3">
+          <label>Email</label>
             <input type="text" name="email" class="form-control" placeholder="Email" required>
           </div>
-          <div class="input-sec mt-3">
+          <div class="input-field mt-3">
+          <label>Message</label>
             <textarea name="message" class="form-control" placeholder="Message" style="height: 110px;" required></textarea>
           </div>
           <div class="input-sec mt-3">
@@ -61,8 +64,9 @@ include('./includes/navbar.php');
 </div>
 
 <div class="mt-5">
-  <?php
-  include('./includes/footer.php');
-  include('./includes/end_links.php');
-  ?>
-</div>
+  <div class="mt-5">
+    <?php
+    include('./includes/footer.php');
+    include('./includes/end_links.php');
+    ?>
+  </div>

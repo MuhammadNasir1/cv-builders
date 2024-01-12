@@ -2,20 +2,20 @@
 session_start();
 
 if (!$_SESSION['user_id']) {
-  header("location: index.php");
+  header("location: index");
 }
 
 
 $dat = json_encode($_SESSION['temdata']);
 if (!$_SESSION['temdata']) {
-  header("location: index.php");
+  header("location: index");
 }
 
 $data = json_decode($dat);
 if (isset($_GET['pre'])) {
   $tem_id = urldecode($_GET['pre']);
   $_SESSION['my_data'] = $tem_id;
-  header('location: ./select.php');
+  header('location: ./select');
 }
 include_once('./includes/db.php');
 $sql = "SELECT * FROM `templetes`";
@@ -81,7 +81,7 @@ $res = mysqli_query($conn, $sql);
   </style>
 
   <div class="topbox">
-    <a href="./personal_info.php" target="_parent"> <button class="editbtn"><i class="fa-solid fa-pencil"></i> Edit</button></a>
+    <a href="./personal_info" target="_parent"> <button class="editbtn"><i class="fa-solid fa-pencil"></i> Edit</button></a>
     <button class="btns" id="downbtn">Download PDF</button>
   </div>
 

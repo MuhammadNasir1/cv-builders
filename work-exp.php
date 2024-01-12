@@ -3,7 +3,7 @@ $title = "Information";
 include('includes/db.php');
 
 if (!$_SESSION['user_id']) {
-  header("location: index.php");
+  header("location: index");
 }
 
 if (isset($_POST['submit'])) {
@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
     }
   }
   if ($result) {
-    header("location: hob_lan_ref.php");
+    header("location: hob_lan_ref");
   } else {
     echo "Error: " . mysqli_error($conn);
   }
@@ -63,7 +63,7 @@ if (@$_REQUEST['del']) {
   $sql_del = "DELETE FROM `work_exp` WHERE work_exp_id = $del_works";
   $result = mysqli_query($conn, $sql_del);
   if ($result) {
-    header("location: work-exp.php");
+    header("location: work-exp");
   }
 }
 ?>
@@ -82,16 +82,16 @@ include("./includes/navbar.php")
   <div class="progres-bar">
     <div class="progress-sec mt-4">
       <div class="progressbarss">
-        <a style="color: black;" href="./personal_info.php">
+        <a style="color: black;" href="./personal_info">
           <p><span style="color:white; border-color:green;     background:green;">1</span> <bdo class="form_progress_txt">Persanal Information</bdo></p>
         </a>
-        <a style="color: black;" href="./edu_skill.php">
+        <a style="color: black;" href="./edu_skill">
           <p><span style="color:white; border-color:green;     background:green;">2</span><bdo class="form_progress_txt">Education/Skills</bdo> </p>
         </a>
-        <a style="color: black;" href="./work-exp.php">
+        <a style="color: black;" href="./work-exp">
           <p><span style="color:white;     background:#C21010;">3</span><bdo class="form_progress_txt">Working Experience</bdo> </p>
         </a>
-        <a href="./hob_lan_ref.php">
+        <a href="./hob_lan_ref">
           <p><span>4</span><bdo class="form_progress_txt">Languages/Reference</bdo> </p>
         </a>
       </div>
@@ -118,7 +118,7 @@ include("./includes/navbar.php")
                   <div class="py-3 mt-4" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px; ">
                     <div class="my-3 position-relative">
                       <h5 class="headinf">Working Experience</h5>
-                      <a href="work-exp.php?del=<?= $work_det['work_exp_id'] ?>">
+                      <a href="work-exp?del=<?= $work_det['work_exp_id'] ?>">
                         <h5 class="position-absolute" style="right: 20px; top:-8px; cursor: pointer; color:red"><i style="color:#c21010;" class="fa-solid fa-x"></i></h5>
                       </a>
                     </div>
@@ -354,7 +354,7 @@ include("./includes/navbar.php")
               </script>
               <div class="form-buttons mb-5 " style="margin-top: 100px;">
 
-                <a href="./edu_skill.php"> <button type="button" class="btn btn-danger  save-btn  add-det-btn"> Previous</button></a>
+                <a href="./edu_skill"> <button type="button" class="btn btn-danger  save-btn  add-det-btn"> Previous</button></a>
                 <button name="submit" type="submit" class="btn btn-danger float-end save-btn  add-det-btn"> <?= $buttontext ?></button>
               </div>
             </div>

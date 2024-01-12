@@ -20,7 +20,7 @@ $translations = json_decode(file_get_contents($langFile), true);
 <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
     <div class="logo">
-      <a href="./index.php"><img src="./image/Cv-Builder-Logo.svg" alt="logo"></a>
+      <a href="./index"><img src="./image/Cv-Builder-Logo.svg" alt="logo"></a>
     </div>
     <span class="nav_collapse navbar-toggler">
       <i data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class='bx bx-menu'></i>
@@ -39,16 +39,16 @@ $translations = json_decode(file_get_contents($langFile), true);
               <?php
               if (@$_SESSION["loginemail"]) {
               ?>
-                <a href="./personal_info.php">Create cv</a>
-                <a href="./templates.php">Show cv templates</a>
-                <a href="./guide.php">How to create CV</a>
+                <a href="./personal_info">Create cv</a>
+                <a href="./showtemplates">Show cv templates</a>
+                <a href="./guide">How to create CV</a>
               <?php
               } else {
 
               ?>
-                <a href="./sign_up.php">Create cv</a>
-                <a href="./sign_up.php">Show cv templates</a>
-                <a href="./guide.php">How to create CV</a>
+                <a href="./sign_up">Create cv</a>
+                <a href="./sign_up">Show cv templates</a>
+                <a href="./guide">How to create CV</a>
 
               <?php
 
@@ -71,9 +71,9 @@ $translations = json_decode(file_get_contents($langFile), true);
               <?php
               if (@$_SESSION["loginemail"]) {
               ?>
-                <a href="./personal_info.php">Create Resume</a>
-                <a href="./templates.php">Show resume templates</a>
-                <a href="./guide.php">How to create resume</a>
+                <a href="./personal_info">Create Resume</a>
+                <a href="./showtemplates">Show resume templates</a>
+                <a href="./guide">How to create resume</a>
 
 
               <?php
@@ -81,9 +81,9 @@ $translations = json_decode(file_get_contents($langFile), true);
               } else {
               ?>
 
-                <a href="./sign_up.php">Create Resume</a>
-                <a href="./sign_up.php">Show resume templates</a>
-                <a href="./guide.php">How to create resume</a>
+                <a href="./sign_up">Create Resume</a>
+                <a href="./sign_up">Show resume templates</a>
+                <a href="./guide">How to create resume</a>
 
               <?php
 
@@ -102,9 +102,9 @@ $translations = json_decode(file_get_contents($langFile), true);
           </p>
           <div class="collapse ph_dropdown" id="colla">
             <div class="mt-2">
-              <a href="./blog.php">blogs</a>
-              <a href="./blog.php">Contact Us</a>
-              <a href="./privacypolicy.php">Privacy & Policy</a>
+              <a href="./blog">blogs</a>
+              <a href="./blog">Contact Us</a>
+              <a href="./privacypolicy">Privacy & Policy</a>
             </div>
           </div>
         </div>
@@ -118,18 +118,18 @@ $translations = json_decode(file_get_contents($langFile), true);
           if (@$_SESSION["loginemail"]) {
           ?>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="./personal_info.php">Create</a></li>
-              <li><a class="dropdown-item" href="./templates.php">Templates</a></li>
-              <li><a class="dropdown-item" href="./guide.php">How to create CV</a></li>
+              <li><a class="dropdown-item" href="./personal_info">Create</a></li>
+              <li><a class="dropdown-item" href="./showtemplates">Templates</a></li>
+              <li><a class="dropdown-item" href="./guide">How to create CV</a></li>
             </ul>
           <?php
 
           } else {
           ?>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="./sign_up.php">Create</a></li>
-              <li><a class="dropdown-item" href="./sign_up.php">Templates</a></li>
-              <li><a class="dropdown-item" href="./guide.php">How to create CV</a></li>
+              <li><a class="dropdown-item" href="./sign_up">Create</a></li>
+              <li><a class="dropdown-item" href="./sign_up">Templates</a></li>
+              <li><a class="dropdown-item" href="./guide">How to create CV</a></li>
             </ul>
           <?php
           }
@@ -143,18 +143,18 @@ $translations = json_decode(file_get_contents($langFile), true);
           if (@$_SESSION["loginemail"]) {
           ?>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="./personal_info.php">Create</a></li>
-              <li><a class="dropdown-item" href="./templates.php">Templates</a></li>
-              <li><a class="dropdown-item" href="./guide.php">How to create Resume</a></li>
+              <li><a class="dropdown-item" href="./personal_info">Create</a></li>
+              <li><a class="dropdown-item" href="./showtemplates">Templates</a></li>
+              <li><a class="dropdown-item" href="./guide">How to create Resume</a></li>
             </ul>
           <?php
 
           } else {
           ?>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="./sign_up.php">Create</a></li>
-              <li><a class="dropdown-item" href="./sign_up.php">Templates</a></li>
-              <li><a class="dropdown-item" href="./guide.php">How to create Resume</a></li>
+              <li><a class="dropdown-item" href="./sign_up">Create</a></li>
+              <li><a class="dropdown-item" href="./sign_up">Templates</a></li>
+              <li><a class="dropdown-item" href="./guide">How to create Resume</a></li>
             </ul>
 
           <?php
@@ -167,20 +167,20 @@ $translations = json_decode(file_get_contents($langFile), true);
             Others
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./blog.php">BLog</a></li>
-            <li><a class="dropdown-item" href="./contact.php">Contact Us</a></li>
-            <li><a class="dropdown-item" href="./privacypolicy.php">Privacy & Policy </a></li>
+            <li><a class="dropdown-item" href="./blog">BLog</a></li>
+            <li><a class="dropdown-item" href="./contact">Contact Us</a></li>
+            <li><a class="dropdown-item" href="./privacypolicy">Privacy & Policy </a></li>
           </ul>
         </li>
 
 
         <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact Us</a>
+          <a class="nav-link" href="contact">Contact Us</a>
         </li>
 
         <div class="nav_sm_drop pe-3 ps-3 pt-4">
           <p>
-            <a href="./contact.php">
+            <a href="./contact">
               Contact Us</span>
             </a>
           </p>
@@ -210,7 +210,7 @@ $translations = json_decode(file_get_contents($langFile), true);
 
         if (@!$_SESSION["loginemail"]) {
 
-          echo '  <a href="./sign_in.php" ><button class="sign_in_btn">Sign in</button></a>';
+          echo '  <a href="./sign_in" ><button class="sign_in_btn">Sign in</button></a>';
         } else {
           echo '<div class="user_details_dropdown">' . @$_SESSION["loginemail"] . '  </div> ';
         }

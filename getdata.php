@@ -68,10 +68,10 @@ $r = mysqli_fetch_assoc($q);
 $mainArray['per_info'] = $r;
 if (@$_REQUEST['pre']) {
   $temid = $_REQUEST['pre'];
-  header('location: preview.php?pre=' . $temid);
+  header('location: preview?pre=' . $temid);
 } else {
   if ($r) {
-    header('location: select.php');
+    header('location: select');
   }
 }
 
