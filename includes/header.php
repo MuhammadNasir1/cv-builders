@@ -1,3 +1,22 @@
+<?php
+session_start();
+if (isset($_GET['lang'])) {
+  $_SESSION['lang'] = $_GET['lang'];
+  setcookie("lang",  $_GET['lang'], time() + (86400 * 365 * 10), "/");
+}
+if (isset($_COOKIE['lang'])) {
+  $currentLang = $_COOKIE['lang'];
+} else {
+  $currentLang = $_SESSION['lang'] ?? 'en';
+}
+if (isset($_GET['lang']) && $_GET['lang'] !== $currentLang) {
+  echo '<script type="text/javascript">location.reload();</script>';
+}
+$langFile = "Languages/{$currentLang}.json";
+$translations = json_decode(file_get_contents($langFile), true);
+// echo $translations['welcome'];
+?>
+
 <!doctype html>
 <html lang="en">
 

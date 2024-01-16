@@ -16,24 +16,22 @@ if (isset($_REQUEST['submit'])) {
   $userRow = mysqli_num_rows($result);
   if ($userRow > 0) {
     $input_red = 'style="border-color:#C21010"';
-    $showError = "email already Exists";
+    $showError =  $translations['email already Exists'];
     $showeror = "<i style='color:#C21010; font-size:22px' class='bx bxs-error-circle'></i>";
   } else {
     if (($password == $cpassword and $email)) {
-      $hach = md5($password, PASSWORD_DEFAULT);
       $sql = "INSERT INTO `users` (`username`, `email`,  `phone_no`,  `password`, `cpassword`) VALUES ('$username', '$email',  '$phone_no', '$password', '$cpassword')";
       $result = mysqli_query($conn, $sql);
       $salert = "show";
 ?>
       <script>
         setTimeout(() => {
-          console.log("hello word");
           window.location.href = "sign_in";
         }, 1000);
       </script>
 <?php
     } else {
-      $passError = "Passwords not matched";
+      $passError = $translations['Passwords not matched'];
       $input_pass_eror = 'style="border-color:#C21010"';
       $salert = '';
     }
@@ -61,9 +59,9 @@ if (isset($_REQUEST['submit'])) {
         </div>
         <div class="signup-input">
           <div class="sign-txt signup-txt">
-            <h4 class="signup-heading">Sign Up</h4>
-            <h3>If you have an account</h3>
-            <h3>You Can <a href="./sign_in">login here !</a></h3>
+            <h4 class="signup-heading"><?= $translations['Sign Up'] ?></h4>
+            <h3><?= $translations['If you have an account']  ?></h3>
+            <h3><?= $translations['You Can']  ?><a href="./sign_in"><?= $translations['login here']  ?> !</a></h3>
           </div>
           <!-- ==========form-start=========== -->
           <div class="form-section">
@@ -71,25 +69,25 @@ if (isset($_REQUEST['submit'])) {
               <form action="#" method="post">
                 <div class="mb-3">
                   <img class="input-icons" src="./image/user-icon.svg" alt="Email">
-                  <label for="Fullname" class="form-label">Full name</label>
-                  <input required name="username" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter your full name">
+                  <label for="Fullname" class="form-label"><?= $translations['Full name']  ?></label>
+                  <input required name="username" type="text" class="form-control" id="username"  placeholder="<?= $translations['Enter your full name']  ?>">
                 </div>
                 <div class="mb-3   position-relative">
                   <img class="input-icons" src="./image/email-icons.svg" alt="Email">
-                  <label for="email" class="form-label">Email</label>
-                  <input <?php echo @$input_red ?> name="email" type="email" class="form-control" id="email" required placeholder="Enter your email address">
+                  <label for="email" class="form-label">Email<?= $translations['Sign in']  ?></label>
+                  <input <?php echo @$input_red ?> name="email" type="email" class="form-control" id="email" required placeholder="<?= $translations['Enter your email address']  ?>">
                   <span class="" style="margin-left:95%; margin-top:-28px ;  position: absolute;"><?php echo  @$showeror ?></span>
                   <div style="color:#C21010; letter-spacing:0.3px " class="form-text"><b><?php echo  @$showError ?></b></div>
                 </div>
                 <div class="mb-3">
                   <img class="input-icons" src="./image/user-icon.svg" alt="Email">
-                  <label for="Fullname" class="form-label">Phone no</label>
-                  <input required name="phone_no" type="number" class="form-control" id="phone_no" placeholder="Enter your Phone no">
+                  <label for="Fullname" class="form-label"><?= $translations['Phone no']  ?></label>
+                  <input required name="phone_no" type="number" class="form-control" id="phone_no" placeholder="<?= $translations['Enter your Phone no']  ?>">
                 </div>
                 <div class="mb-3">
                   <img class="input-icons" src="./image/passsword-icons.svg" alt="Pass">
-                  <label for="password" class="form-label">Password</label>
-                  <input required <?php echo @$input_pass_eror ?>t name="password" type="password" id="pass" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+                  <label for="password" class="form-label"><?= $translations['Password']  ?></label>
+                  <input required <?php echo @$input_pass_eror ?>t name="password" type="password" id="pass" class="form-control" id="exampleInputPassword1" placeholder="<?= $translations['Enter your password']  ?>">
                   <div onclick="showpassword()">
                     <a class="pass-icon" id="pass_hide_icon" href="#"><i class="fa-regular fa-eye-slash"></i></a>
                     <a style="display: none;" class="pass-icon" id="pass_show_icon" href="#"><i class="fa-regular fa-eye"></i></a>
@@ -97,13 +95,13 @@ if (isset($_REQUEST['submit'])) {
                 </div>
                 <div class="mb-4 position-relative">
                   <img class="input-icons" src="./image/passsword-icons.svg" alt="Pass">
-                  <label for="cpassword" class="form-label">Conform Password</label>
-                  <input required <?php echo @$input_pass_eror ?> name="cpassword" type="password" id="pass2" class="form-control" id="exampleInputPassword1" placeholder="Enter your password again">
+                  <label for="cpassword" class="form-label"><?= $translations['Conform Password']  ?></label>
+                  <input required <?php echo @$input_pass_eror ?> name="cpassword" type="password" id="pass2" class="form-control" id="exampleInputPassword1" placeholder="<?= $translations['Enter your password again']  ?>">
                   <div onclick="showpassword()">
                     <div style="color:#C21010; letter-spacing:0.3px " class="form-text"><b><?php echo  @$passError ?></b></div>
                   </div>
                 </div>
-                <button name="submit" type="submit" class=" mt-3 btn btn-primary">Sign Up</button>
+                <button name="submit" type="submit" class=" mt-3 btn btn-primary"><?= $translations['Sign Up']  ?></button>
               </form>
             </div>
           </div>

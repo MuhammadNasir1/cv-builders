@@ -1,4 +1,36 @@
 {
-  "welcome": "¡Bienvenido",
-  "about": "Acerca"
+  "Sign in": "Iniciar sesión",
+  "If you Don't have an account": "Si no tienes una cuenta",
+  "You Can": "Puedes",
+  "Register here": "Registrarte aquí",
+  "Enter your email address": "Introduce tu dirección de correo electrónico",
+  "Email": "Correo electrónico",
+  "Password": "Contraseña",
+  "Enter your password": "Introduce tu contraseña",
+  "Rememebr me": "Recuérdame",
+  "Email not match": "Correo electrónico no coincide",
+  
+  "Passwords not matched": "Passwords not matched",
+  "Email already Exists": "Correo electrónico ya existe",
+  "Full name": "Nombre completo",
+  "Enter your full name": "Ingresa tu nombre completo",
+  "Phone no": "Número de teléfono",
+  "Enter your Phone no": "Ingresa tu número de teléfono",
+  "Conform Password": "Confirmar contraseña",
+  "Enter your password again": "Ingresa tu contraseña nuevamente",
+  
+    "If you have an account": "Si tienes una cuenta",
+    "Create cv": "Crear CV",
+    "Show cv template": "Mostrar plantillas de CV",
+    "How to create CV": "Cómo crear un CV",
+    "Create Resume": "Crear currículum",
+    "Show resume templates": "Mostrar plantillas de currículum",
+    "How to create resume": "Cómo crear un currículum",
+    "blogs": "Blogs",
+    "Contact Us": "Contáctanos",
+    "Privacy & Policy": "Privacidad y Política",
+    "Create": "Crear",
+    "Templates": "Plantillas"
+  
+  
 }

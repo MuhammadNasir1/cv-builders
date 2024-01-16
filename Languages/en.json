@@ -1,4 +1,38 @@
 {
-  "welcome": "Welcome",
-  "about": "About"
+  "Sign in": "Sign in",
+  "Sign Up": "Sign Up",
+  "login here": "login here",
+  "If you Don't have an account": "If you Don't have an account",
+  "You Can": "You can",
+  "Register here": "Register here",
+  "Enter your email address": "If you Don't have an account",
+  "Email": "Email",
+  "Password": "Password",
+  "Enter your password": "Enter your password",
+  "Rememebr me": "Rememebr me",
+  "Email  not match": "Email  not match",
+  "Passwords not matched": "Passwords not matched",
+  "email already Exists": "email already Exists",
+  "Full name": "Full name",
+  "Enter your full name": "Enter your full name",
+  "Phone no": "Phone no",
+  "Enter your Phone no": "Enter your Phone no",
+  "Conform Password": "Conform Password",
+  "Enter your password again": "Enter your password again",
+  "If you have an account": "If you have an account",
+  "Create cv": "Create cv",
+  "Show cv template": "Show cv template",
+  "How to create CV": "How to create CV",
+  "Create Resume": "Create Resume",
+  "Show resume templates": "Show resume templates",
+  "How to create resume": "How to create resume",
+  "blogs": "Blogs",
+  "Contact Us": "Contact Us",
+  "Privacy & Policy": "Privacy & Policy",
+  "Create": "Create",
+  "Templates": "Templates"
+
+
+
+
 }
