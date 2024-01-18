@@ -13,7 +13,7 @@
         <div class="nav_sm_drop p-3">
           <p>
             <a class="" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-              CV <span class="float-end"><i class='bx bx-chevron-down'></i></span>
+            <?= $translations['CV'] ?> <span class="float-end"><i class='bx bx-chevron-down'></i></span>
             </a>
           </p>
           <div class="collapse ph_dropdown" id="collapseExample">
@@ -45,7 +45,7 @@
         <div class="nav_sm_drop pe-3 ps-3">
           <p>
             <a class="" data-bs-toggle="collapse" href="#collaps" role="button" aria-expanded="false" aria-controls="collapseExample">
-              Resume <span class="float-end"><i class='bx bx-chevron-down'></i></span>
+              <?= $translations['Resume'] ?> <span class="float-end"><i class='bx bx-chevron-down'></i></span>
             </a>
           </p>
           <div class="collapse ph_dropdown" id="collaps">
@@ -79,13 +79,13 @@
         <div class="nav_sm_drop pe-3 ps-3 pt-4">
           <p>
             <a class="" data-bs-toggle="collapse" href="#colla" role="button" aria-expanded="false" aria-controls="collapseExample">
-              Others <span class="float-end"><i class='bx bx-chevron-down'></i></span>
+              <?= $translations['Others'] ?> <span class="float-end"><i class='bx bx-chevron-down'></i></span>
             </a>
           </p>
           <div class="collapse ph_dropdown" id="colla">
             <div class="mt-2">
-              <a href="./blog"><?= $translations['blogs'] ?>blogs</a>
-              <a href="./blog"><?= $translations['Contact Us'] ?>Contact Us</a>
+              <a href="./blog"><?= $translations['blogs'] ?></a>
+              <a href="./blog"><?= $translations['Contact Us'] ?></a>
               <a href="./privacypolicy"><?= $translations['Privacy & Policy'] ?></a>
             </div>
           </div>
@@ -94,7 +94,7 @@
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            CV
+          <?= $translations['CV'] ?>
           </a>
           <?php
           if (@$_SESSION["loginemail"]) {
@@ -119,14 +119,14 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Resume
+          <?= $translations['Resume'] ?>
           </a>
           <?php
           if (@$_SESSION["loginemail"]) {
           ?>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="./personal_info"><?= $translations['Create'] ?></a></li>
-              <li><a class="dropdown-item" href="./showtemplates">T<?= $translations['Templates'] ?></a></li>
+              <li><a class="dropdown-item" href="./showtemplates"><?= $translations['Templates'] ?></a></li>
               <li><a class="dropdown-item" href="./guide"><?= $translations['How to create Resume'] ?></a></li>
             </ul>
           <?php

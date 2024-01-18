@@ -162,17 +162,17 @@ include("includes/navbar.php");
     <div class="progress-sec mt-4">
       <div class="progressbarss">
         <a style="color: black;" href="./personal_info">
-          <p><span style="color:white; border-color:green;     background:green;">1</span> <bdo class="form_progress_txt">Persanal Information</bdo></p>
+          <p><span style="color:white; border-color:green;     background:green;">1</span> <bdo class="form_progress_txt"><?= $translations['Persanal Information'] ?></bdo></p>
         </a>
         <a style="color: black;" href="./edu_skill">
-          <p><span style="color:white; border-color:green;     background:green;">2</span> <bdo class="form_progress_txt">Education/Skills</bdo></p>
+          <p><span style="color:white; border-color:green;     background:green;">2</span> <bdo class="form_progress_txt"><?= $translations['Education/Skill'] ?></bdo></p>
         </a>
         <a style="color: black;" href="./work-exp">
-          <p><span style="color:white; border-color:green;     background:green;">3</span><bdo class="form_progress_txt">Working Experience</bdo> </p>
+          <p><span style="color:white; border-color:green;     background:green;">3</span><bdo class="form_progress_txt"><?= $translations['Working Experience'] ?></bdo> </p>
         </a>
 
         <a style="color: black;" href="./hob_lan_ref">
-          <p><span style="color:white;     background:#C21010;">4</span> <bdo class="form_progress_txt">Languages/Reference</bdo></p>
+          <p><span style="color:white;     background:#C21010;">4</span> <bdo class="form_progress_txt"><?= $translations['Languages/Reference'] ?></bdo></p>
         </a>
 
 

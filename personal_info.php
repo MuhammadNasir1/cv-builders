@@ -48,17 +48,17 @@ if (isset($_POST['submit'])) {
   }
 }
 
+include("./includes/header.php");
 $checkdata = mysqli_query($conn, "SELECT * FROM per_info WHERE user_id = '" . $_SESSION['user_id'] . "' ");
 if (mysqli_num_rows($checkdata) == 1) {
   $per_det = mysqli_fetch_assoc($checkdata);
-  $buttontext = "Update";
+  $buttontext = $translations['Next'];
   $db_img = "<label for='files'><i class='bx bxs-user'></i><span id='imagePreview'></span> <img id='upd_img' style='width: 150px; height:150px; border-radius: 50%;' src='./uploads/images/" . $per_det['user_img'] . "'></label>";
 } else {
-  $buttontext = "Save";
+  $buttontext = $translations['Save'];
   $db_img = "<label  for='files'><i class='bx bxs-user'></i><span id='imagePreview'></span></label>";
 }
 
-include("./includes/header.php");
 include("./includes/navbar.php");
 ?>
 <style>
@@ -72,16 +72,16 @@ include("./includes/navbar.php");
     <div class="progress-sec mt-4 ">
       <div class="progressbarss">
         <a style="color: black;" href="./personal_info">
-          <p class="text-dark"><span style="color:white;     background:#C21010;">1</span> <bdo class="form_progress_txt">Persanal Information</bdo></p>
+          <p class="text-dark"><span style="color:white;     background:#C21010;">1</span> <bdo class="form_progress_txt"><?= $translations['Persanal Information'] ?></bdo></p>
         </a>
         <a href="./edu_skill">
-          <p><span>2</span> <bdo class="form_progress_txt">Education/Skill</bdo> </p>
+          <p><span>2</span> <bdo class="form_progress_txt"><?= $translations['Education/Skill'] ?></bdo> </p>
         </a>
         <a href="./work-exp">
-          <p><span>3</span> <bdo class="form_progress_txt">Working Experience</bdo></p>
+          <p><span>3</span> <bdo class="form_progress_txt"><?= $translations['Working Experience'] ?></bdo></p>
         </a>
         <a href="./hob_lan_ref">
-          <p><span>4</span> <bdo class="form_progress_txt">Languages/Reference </bdo></p>
+          <p><span>4</span> <bdo class="form_progress_txt"><?= $translations['Languages/Reference'] ?></bdo></p>
         </a>
       </div>
     </div>
@@ -100,7 +100,7 @@ include("./includes/navbar.php");
         <div class="personal-info-form py-3 mt-5" style=" box-shadow:0px 0px 15px 10px #E0E0E0; border-radius:20px;">
           <div style="display:flex;  align-items: center; justify-content: space-between;">
             <div class="my-3 position-relative">
-              <h5 class="headinf">Personal Information</h5>
+              <h5 class="headinf"><?= $translations['Personal Information'] ?></h5>
             </div>
 
           </div>
@@ -117,11 +117,11 @@ include("./includes/navbar.php");
                   <div class="row">
                     <div class="col-lg-9 col-md-8 col-7 ">
                       <div class="input-field ">
-                        <label>First Name</label>
+                        <label><?= $translations['First Name'] ?></label>
                         <input id="fnamev" name="fname" class="w-100" type="text" value="<?= @$per_det['fname'] ?>">
                         <!-- ============Last Name============ -->
                         <div class="input-field">
-                          <label>Last Name</label>
+                          <label><?= $translations['Last Name'] ?></label>
                           <input id="lnamev" name="lname" class="w-100" type="text" value="<?= @$per_det['lname'] ?>">
                         </div>
                       </div>
@@ -143,14 +143,14 @@ include("./includes/navbar.php");
                 <!-- ============Father Name============ -->
                 <div class="col-md-6">
                   <div class="input-field">
-                    <label>Father Name</label>
+                    <label><?= $translations['Father Name'] ?></label>
                     <input name="father_name" type="text" required value="<?= @$per_det['father_name'] ?>">
                   </div>
                 </div>
                 <!-- ===============Gender=================== -->
                 <div class="col-md-6">
                   <div class="input-field">
-                    <label>Gender</label>
+                    <label><?= $translations['Gender'] ?></label>
                     <select name="gender" class="form-select gender-option">
                       <option <?= (@$per_det['gender'] == 'Male') ? 'selected' : '' ?>>Male</option>
                       <option <?= (@$per_det['gender'] == 'Female') ? 'selected' : '' ?>>Female</option>
@@ -162,52 +162,52 @@ include("./includes/navbar.php");
                 <!-- ============DOB============ -->
                 <div class="col-md-6">
                   <div class="input-field">
-                    <label>DOB <span>(date of birth)</span></label>
+                    <label><?= $translations['DOB'] ?> <span><?= $translations['(date of birth)'] ?></span></label>
                     <input name="dob" type="date" required value="<?= @$per_det['dob'] ?>">
                   </div>
                 </div>
                 <!-- ============Professional============ -->
                 <div class="col-md-6">
                   <div class="input-field">
-                    <label>Profession <span>(skill)</span></label>
+                    <label> <?= $translations['Profession'] ?><span>(<?= $translations['skill'] ?>)</span></label>
                     <input name="profession" type="text" required value="<?= @$per_det['profession'] ?>">
                   </div>
                 </div>
                 <!-- ============Website============ -->
                 <div class="col-md-12">
                   <div class="input-field">
-                    <label>Website</label>
+                    <label><?= $translations['Website'] ?></label>
                     <input name="website" class="email_width" type=" email" value="<?= @$per_det['website'] ?>">
                   </div>
                 </div>
                 <!-- ============Contact no============ -->
                 <div class="col-md-6">
                   <div class="input-field">
-                    <label>Personal No</label>
+                    <label><?= $translations['Personal No'] ?></label>
                     <input name="personal_no" type="number" required value="<?= @$per_det['per_no'] ?>">
                   </div>
                 </div>
                 <!-- ============Telephone No============ -->
                 <div class="col-md-6">
                   <div class="input-field">
-                    <label>Tel No</label>
+                    <label><?= $translations['Tel No'] ?></label>
                     <input name="tel_no" type="number" value="<?= @$per_det['tel_no'] ?>">
                   </div>
                 </div>
                 <!-- ============Email============ -->
                 <div class="col-md-12">
                   <div class="input-field">
-                    <label>Email</label>
+                    <label><?= $translations['Email'] ?></label>
                     <input name="email" class="email_width" type=" email" required value="<?= @$per_det['email'] ?>">
                   </div>
                 </div>
                 <!-- ============Country============ -->
                 <div class="col-md-6">
                   <div class="input-field">
-                    <label>Country</label>
+                    <label><?= $translations['Country'] ?></label>
                     <select class="country form-control " name="country" id="country" value="<?= @$per_det['country'] ?>">
                       <?php
-                      include_once('others/countrylist')
+                      include_once('others/countrylist.php')
                       ?>
                     </select>
                   </div>
@@ -215,16 +215,16 @@ include("./includes/navbar.php");
                 <!-- ============Contact no============ -->
                 <div class="col-md-6">
                   <div class="input-field">
-                    <label>City</label>
+                    <label><?= $translations['City'] ?></label>
                     <input name="city" type="text" required value="<?= @$per_det['city'] ?>">
                   </div>
                 </div>
                 <!-- ============about us ============ -->
                 <div class="col-md-12">
                   <div class="input-field">
-                    <label>About</label>
+                    <label><?= $translations['About'] ?></label>
                     <textarea maxlength="180" name="about_us" class="email_width form-control" rows="4"><?= @$per_det['about_us'] ?> </textarea>
-                    <div class="form-text about-us-txt">Enter yourself in less than <b>180</b> Letters</div>
+                    <div class="form-text about-us-txt"><?= $translations['Enter yourself in less than'] ?> <b>180</b> <?= $translations['Letters'] ?></div>
                   </div>
                 </div>
               </div>
@@ -243,18 +243,15 @@ include("./includes/navbar.php");
 <!-- ==============form-tips-sec-start============== -->
 <div class="col-lg-5 mt-4 mt-lg-0 " style=" box-shadow:0px 0px 20px 10px #E0E0E0; border-radius:20px; margin-top:46px !important ;">
   <div class="Form-tip-sec">
-    <h3>TIPS</h3>
+    <h3><?= $translations['TIPS'] ?></h3>
     <div class="text mt-2">
       <ul>
-        <li>Make sure your form has no spelling or any type of mistakes.</li>
-        <li><strong>Full Name: </strong> Include your full legal name at the top of the document in a larger font size than the rest of the content.</li>
-        <li><strong>Contact Information:</strong> Provide essential contact details such as your phone number, email address, and location (city and state or country).
-          Avoid sharing unnecessary personal information like your marital status or social security number.</li>
-        <li><strong>Professional Email Address:</strong> Use a simple and professional email address that incorporates your name,
-          such as firstname.lastname@email.com</li>
-        <li><strong>Mailing Address:</strong> Unless specifically requested, it's generally not necessary to include your full mailing address. Providing your city
-          and state is usually sufficient.Lorem ipsum dolor sit amet consectetur, adipisicing Architecto, dolor.</li>
-        <li><strong>Personal Website or Portfolio (optional):</strong> If you have a personal website or online portfolio showcasing your work, skills, or achievements, include a link to it.</li>
+        <li><?= $translations['Make sure your form has no spelling or any type of mistakes.'] ?></li>
+        <li><strong><?= $translations['Full Name'] ?>:</strong><?= $translations['Include your full legal name at the top of the document in a larger font size than the rest of the content.'] ?> </li>
+        <li><strong><?= $translations['Contact Information'] ?>:</strong><?= $translations['perinfolist'] ?> </li>
+        <li><strong><?= $translations['Professional Email Address'] ?>:</strong> <?= $translations['perinfolist2'] ?>/li>
+        <li><strong><?= $translations['Mailing Address'] ?>:</strong> <?= $translations['perinfolist3'] ?></li>
+        <li><strong><?= $translations['Personal Website or Portfolio (optional)'] ?>:</strong><?= $translations['perinfolist4'] ?> </li>
       </ul>
     </div>
   </div>
@@ -272,7 +269,7 @@ include("./includes/navbar.php");
   <section style="background-color: #C21010">
     <div class=" d-flex justify-content-between pe-3  ps-3">
       <div class="social-icon-heading">
-        <p>Our social media handles:</p>
+        <p> <?= $translations['Our social media handles'] ?>:</p>
       </div>
       <div class="icons pt-1">
         <a href="#"><i class='bx bxl-facebook'></i></a>
@@ -283,7 +280,7 @@ include("./includes/navbar.php");
     </div>
   </section>
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-    © 2023 Copyright:The Product By
+    © 2023 <?= $translations['Copyright:The Product By'] ?>
     <a class="text-white" href="https://thewebconcept.com/">thewebconcept.com</a>
   </div>
 </footer>

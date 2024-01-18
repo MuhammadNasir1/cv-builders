@@ -23,8 +23,8 @@ $r = mysqli_query($conn, $q);
     <div class="heading">
       <h1><span style="color:#C21010; font-weight: 800;" href="" class="typewrite" data-period="2000" data-type='[ "CV", "Resume" ]'>
           <span class="wrap"></span>
-        </span> Templates</h1>
-      <h5>Select your relevant template , create your <br> create your Cv or Resume easily </h5>
+        </span><?= $translations['Templates'] ?> </h1>
+      <h5><?= $translations['Select your relevant template , create your'] ?> <br> <?= $translations['create your Cv or Resume easily'] ?> </h5>
     </div>
   </div>
 </div>
@@ -65,7 +65,7 @@ $r = mysqli_query($conn, $q);
               <div style="width:90%">
                 <div class="temp_img ">
                   <img src="./templates/tem-img/<?= $data['templete_img'] ?>" alt="image" loading="lazy">
-                  <h2 class="position-absolute">SELECT</h2>
+                  <h2 class="position-absolute"><?= $translations["select"] ?></h2>
                 </div>
               </div>
             </div>

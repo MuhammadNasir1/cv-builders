@@ -23,8 +23,8 @@ include('./includes/navbar.php');
 <div class="container-fluid p-0 pt-1">
   <div class="blog-heading-img ">
     <div class="heading">
-      <h5><a href="index">HOME</a> /BLOG</h5>
-      <h1>Contact Us</h1>
+      <h5><a href="index"><?= $translations['HOME'] ?></a> / <?= $translations['BLOG'] ?></h5>
+      <h1><?= $translations['Contact Us'] ?></h1>
     </div>
   </div>
 </div>
@@ -40,22 +40,22 @@ include('./includes/navbar.php');
       <form action="#" method="post">
         <div class="con-form-sec mt-5">
           <div class="heading">
-            <h3>For Enquiries</h3>
+            <h3><?= $translations['For Enquiries'] ?></h3>
           </div>
           <div class="input-field mt-3">
-          <label>Name</label>
-            <input type="text" name="fullnname" class="form-control" placeholder="Name" required>
+          <label><?= $translations['Name'] ?></label>
+            <input type="text" name="fullnname" class="form-control" placeholder="<?= $translations['Name'] ?>" required>
           </div>
           <div class="input-field mt-3">
-          <label>Email</label>
-            <input type="text" name="email" class="form-control" placeholder="Email" required>
+          <label><?= $translations['Email'] ?></label>
+            <input type="text" name="email" class="form-control" placeholder="<?= $translations['Email'] ?>" required>
           </div>
           <div class="input-field mt-3">
-          <label>Message</label>
-            <textarea name="message" class="form-control" placeholder="Message" style="height: 110px;" required></textarea>
+          <label><?= $translations['Message'] ?></label>
+            <textarea name="message" class="form-control" placeholder="<?= $translations['Message'] ?>" style="height: 110px;" required></textarea>
           </div>
           <div class="input-sec mt-3">
-            <button name="submit" id="sendbtn">Send Message</button>
+            <button name="submit" id="sendbtn"><?= $translations['Send Message'] ?></button>
           </div>
         </div>
       </form>

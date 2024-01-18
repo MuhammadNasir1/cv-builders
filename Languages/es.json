@@ -30,7 +30,10 @@
     "Contact Us": "Contáctanos",
     "Privacy & Policy": "Privacidad y Política",
     "Create": "Crear",
-    "Templates": "Plantillas"
+    "Templates": "Plantillas",
   
-  
+    "CV": "CV",
+    "Resume": "Resume",
+    "Others": "Others",
+    "Show cv templates": "Show cv templates"
 }

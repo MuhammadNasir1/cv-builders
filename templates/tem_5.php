@@ -13,7 +13,8 @@
     min-height: 296.5mm;
     background-color: aliceblue;
     position: relative;
-
+    transform: translatey(70px);
+    margin: auto;
 
   }
 
@@ -81,18 +82,24 @@
     <div class="main_container">
       <!-- COLUMN FIRST -->
       <div>
-        <div class="circle">
-          <img style="height: 100%; width:100%;   border-radius:50%" src="./uploads/images/<?= $data->per_info->user_img ?>" alt="">
+        <?php
+        if ($data->per_info->user_img) {
+        ?>
+          <div class="circle">
+            <img style="height: 100%; width:100%;   border-radius:50%" src="./uploads/images/<?= $data->per_info->user_img ?>" alt="">
 
-        </div>
+          </div>
+        <?php
+        }
+        ?>
         <div class="inner_container">
           <!-- Name div -->
           <div style="text-align: center">
             <div>
-              <h1 style="text-transform: uppercase">carloss mias</h1>
+              <h2 style="text-transform: uppercase"><?= ucfirst($data->per_info->fname) ?> <?= ucfirst($data->per_info->lname) ?></h2>
             </div>
             <div>
-              <span style="text-transform: uppercase; font-size: 14px">graphic designer</span>
+              <span style="text-transform: uppercase; font-size: 14px"><?= ucwords($data->per_info->profession) ?></span>
             </div>
           </div>
           <!-- end -->
@@ -109,10 +116,10 @@
                   gap: 50px;
                 ">
               <div>
-                <i class="fa-solid fa-user" style="font-size: 30px"></i>
+                <i class="fa-solid fa-user" style="font-size: 24px;margin-left:20px"></i>
               </div>
               <div>
-                <h1 style="text-transform: uppercase">Profile</h1>
+                <h2 style="text-transform: uppercase">Profile</h2>
               </div>
             </div>
             <div>
@@ -166,10 +173,10 @@
                   flex-direction: column;
                   gap: 20px;
                 ">
-              <h3>Name</h3>
+              <h3>Gender</h3>
               <h3>phone</h3>
               <h3>email</h3>
-              <h3>website</h3>
+              <h3>Adress</h3>
             </div>
             <div style="
                   display: flex;
@@ -178,10 +185,11 @@
                   font-size: 12px;
                   color: gray;
                 ">
-              <h3>Usman mirza</h3>
-              <h3>03166614344</h3>
-              <h3>test@gmail.com</h3>
-              <h3>www.clorasmiass.com</h3>
+              <h3><?= ucfirst($data->per_info->gender) ?></h3>
+              <h3><?= ucfirst($data->per_info->per_no) ?></h3>
+              <h3><?= ucfirst($data->per_info->email) ?></h3>
+              <h3><?= ucfirst($data->per_info->country) ?>
+                <?= ucfirst($data->per_info->city) ?></h3>
             </div>
           </div>
           <!--  -->
@@ -200,58 +208,27 @@
                   
                 ">
               <div>
-                <i class="fa-solid fa-phone" style="font-size: 30px"></i>
+                <i class="fa-solid fa-phone" style="font-size: 24px; margin-left:20px"></i>
               </div>
               <div>
-                <h1 style="text-transform: uppercase">hobbies</h1>
+                <h2 style="text-transform: uppercase">hobbies</h2>
               </div>
+
+            </div>
+            <div>
+              <ul style="margin-top:20px">
+                <?php
+                for ($i = 0; $i < count($data->hobbies); $i++) {
+                ?>
+                  <li style="font-size:18px;margin:10px 0 0  40px"><?= ucfirst($data->hobbies[$i]->hobby) ?></li>
+                <?php
+                }
+                ?>
+
+              </ul>
             </div>
           </div>
-          <!-- ,,,,,,,,,,,,,,,,, -->
-          <div style="
-                display: grid;
-                grid-template-columns: 130px auto;
-                gap: 10px;
-                padding: 10px;
-                margin-top: 10px;
-                
-              ">
-            <div style="
-                  text-transform: uppercase;
-                  font-size: 12px;
-                  display: flex;
-                  flex-direction: column;
-                  gap: 20px;
-                ">
-              <h3>cricket</h3>
-              <h3>hockey</h3>
-              <h3>football</h3>
-              <h3>watch movies</h3>
-            </div>
-            <div style="
-                  display: flex;
-                  flex-direction: column;
-                  gap: 29px;
-                  font-size: 12px;
-                  color: gray;
-                ">
-              <div style="width: 100%; height: 10px; background-color: #2d3436;">
-                <div style="width: 30%; height: 10px; background-color: #1abc9c;"></div>
-              </div>
-              <!--  -->
-              <div style="width: 100%; height: 10px; background-color: #2d3436;">
-                <div style="width: 30%; height: 10px; background-color: #1abc9c;"></div>
-              </div>
-              <!--  -->
-              <div style="width: 100%; height: 10px; background-color: #2d3436;">
-                <div style="width: 30%; height: 10px; background-color: #1abc9c;"></div>
-              </div>
-              <!--  -->
-              <div style="width: 100%; height: 10px; background-color: #2d3436;">
-                <div style="width: 30%; height: 10px; background-color: #1abc9c;"></div>
-              </div>
-            </div>
-          </div>
+
 
           <!-- conatact end -->
         </div>
@@ -286,10 +263,10 @@
                   gap: 70px;
                 ">
               <div>
-                <i class="fa-solid fa-graduation-cap" style="font-size: 30px; color: aquamarine"></i>
+                <i class="fa-solid fa-graduation-cap" style="font-size: 24px; color: aquamarine;margin-left:20px;"></i>
               </div>
               <div>
-                <h1 style="text-transform: uppercase">education</h1>
+                <h2 style="text-transform: uppercase">education</h2>
               </div>
             </div>
           </div>
@@ -298,48 +275,42 @@
           <div>
             <div style="display: grid; grid-template-columns: 20px auto; margin-top: 20px;">
 
-              <div style="display: flex; flex-direction: column; gap: 107px; align-items: center;">
-                <div style="background-color: #2d3436; width: 10px; height: 10px;border-radius: 50%;"></div>
-                <div style="background-color: #2d3436; width: 10px; height: 10px;border-radius: 50%;"></div>
+              <div style="display: flex; flex-direction: column; gap: 107px; align-items: center;"></div>
+              <?php
+              for ($i = 0; $i < count($data->education); $i++) {
+                $edupre =  $data->education[$i]->edu_present;
+                if ($edupre == 0) {
+                  $edupre = $data->education[$i]->deg_end_date;
+                  $newFormat = date("M Y", strtotime($edupre));
+                } else {
+                  $newFormat = "Present";
+                }
 
-              </div>
-              <div style=" display: flex; flex-direction: column; gap: 20px; ">
-                <div style="display: flex; flex-direction: column; gap: 5px;">
-                  <div>
-                    <h3 style="text-transform: uppercase; font-size: 12px;">lorem//may2017-july2016</h3>
+              ?>
+                <div style=" display: flex; flex-direction: column; gap: 20px; ">
+                  <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <div>
+                      <h3 style="text-transform: uppercase; font-size: 12px;"><?= ucwords($data->education[$i]->dagree) ?> / <?= date("M Y", strtotime($data->education[$i]->deg_st_date)) ?> - <?= $newFormat ?></h3>
+                    </div>
+                    <div>
+                      <h2 style="text-transform: uppercase; font-size: 12px;"><?= ucwords($data->education[$i]->instutute_name) ?> </h2>
+                    </div>
+                    <div>
+                      <p style="text-align: justify; font-size: 12px;"><?= ucfirst($data->education[$i]->field) ?></p>
+                    </div>
+
+
+
                   </div>
-                  <div>
-                    <h2 style="text-transform: uppercase; font-size: 12px;">lorem ipsum dollar</h2>
-                  </div>
-                  <div>
-                    <p style="text-align: justify; font-size: 12px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga quia qui quaerat temporibus, earum odio? Rem minima libero, et ipsa quas minus explicabo nulla dicta nostrum tempora reprehenderit illo. Modi.</p>
-                  </div>
+
+                <?php
+              }
+                ?>
+
 
 
 
                 </div>
-                <!-- ... -->
-                <div style="display: flex; flex-direction: column; gap: 5px;">
-                  <div>
-                    <h3 style="text-transform: uppercase; font-size: 12px;">lorem//may2017-july2016</h3>
-                  </div>
-                  <div>
-                    <h2 style="text-transform: uppercase; font-size: 12px;">lorem ipsum dollar</h2>
-                  </div>
-                  <div>
-                    <p style="text-align: justify; font-size: 12px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga quia qui quaerat temporibus, earum odio? Rem minima libero, et ipsa quas minus explicabo nulla dicta nostrum tempora reprehenderit illo. Modi.</p>
-                  </div>
-
-
-
-                </div>
-                <!-- ... -->
-
-
-
-
-
-              </div>
 
 
             </div>
@@ -360,10 +331,10 @@
                   gap: 70px;
                 ">
               <div>
-                <i class="fa-solid fa-graduation-cap" style="font-size: 30px; color: aquamarine"></i>
+                <i class="fa-solid fa-graduation-cap" style="font-size: 24px; color: aquamarine; margin-left:20px"></i>
               </div>
               <div>
-                <h1 style="text-transform: uppercase">experience</h1>
+                <h2 style="text-transform: uppercase">experience</h2>
               </div>
             </div>
           </div>
@@ -374,47 +345,42 @@
             <div style="display: grid; grid-template-columns: 20px auto; margin-top: 20px;">
 
               <div style="  display: flex; flex-direction: column; gap: 107px; align-items: center;">
-                <div style="background-color: #2d3436; width: 10px; height: 10px;border-radius: 50%;"></div>
-                <div style="background-color: #2d3436; width: 10px; height: 10px;border-radius: 50%;"></div>
-
               </div>
-              <div style=" display: flex; flex-direction: column; gap: 15px; ">
-                <div style="display: flex; flex-direction: column;gap: 5px;">
-                  <div>
-                    <h3 style="text-transform: uppercase; font-size: 12px;">lorem//may2017-july2016</h3>
+              <?php
+              for ($i = 0; $i < count($data->work_exp); $i++) {
+                $pre = $data->work_exp[$i]->present;
+                if ($pre == 0) {
+                  $pre = $data->work_exp[$i]->work_end_date;
+                  $wenddata = date("M Y", strtotime($pre));
+                } else {
+                  $wenddata = "Present";
+                };
+              ?>
+                <div style=" display: flex; flex-direction: column; gap: 15px; ">
+                  <div style="display: flex; flex-direction: column;gap: 5px;">
+                    <div>
+                      <h3 style="text-transform: uppercase; font-size: 12px;"><?= ucfirst($data->work_exp[$i]->company_name) ?> / <?= date(" M Y ", strtotime($data->work_exp[$i]->work_st_data)) ?> - <?= $wenddata ?> </h3>
+                    </div>
+                    <div>
+                      <h2 style="text-transform: uppercase; font-size: 12px;"><?= ucfirst($data->work_exp[$i]->company_name) ?></h2>
+                    </div>
+                    <div>
+                      <p style="text-align: justify; font-size: 12px;"> <?= ucfirst($data->work_exp[$i]->city_country) ?></p>
+                    </div>
+
+
+
                   </div>
-                  <div>
-                    <h2 style="text-transform: uppercase; font-size: 12px;">lorem ipsum dollar</h2>
-                  </div>
-                  <div>
-                    <p style="text-align: justify; font-size: 12px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga quia qui quaerat temporibus, earum odio? Rem minima libero, et ipsa quas minus explicabo nulla dicta nostrum tempora reprehenderit illo. Modi.</p>
-                  </div>
+
+
+                <?php
+              }
+                ?>
+
 
 
 
                 </div>
-                <!-- ... -->
-                <div style="display: flex; flex-direction: column; gap: 5px;">
-                  <div>
-                    <h3 style="text-transform: uppercase; font-size: 14px;">lorem//may2017-july2016</h3>
-                  </div>
-                  <div>
-                    <h2 style="text-transform: uppercase; font-size: 15px;">lorem ipsum dollar</h2>
-                  </div>
-                  <div>
-                    <p style="text-align: justify; font-size: 12px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga quia qui quaerat temporibus, earum odio? Rem minima libero, et ipsa quas minus explicabo nulla dicta nostrum tempora reprehenderit illo. Modi.</p>
-                  </div>
-
-
-
-                </div>
-                <!-- ... -->
-
-
-
-
-
-              </div>
 
 
             </div>
@@ -422,7 +388,7 @@
           </div>
 
           <!--  -->
-          <div style="margin-top: 20px">
+          <div style="margin-top: 30px">
             <div style="
             background-color: #2d3436;
             width: 90%;
@@ -434,57 +400,45 @@
             gap: 50px;
           ">
               <div>
-                <i class="fa-solid fa-phone" style="font-size: 30px"></i>
+                <i class="fa-solid fa-phone" style="font-size: 24px; font-size: 24px; color: aquamarine; margin-left:20px;"></i>
               </div>
               <div>
-                <h1 style="text-transform: uppercase">skills</h1>
+                <h2 style="text-transform: uppercase">skills</h2>
               </div>
             </div>
           </div>
           <!-- ,,,,,,,,,,,,,,,,, -->
-          <div style="
-          display: grid;
-          grid-template-columns: 170px auto;
-          gap: 10px;
-          padding: 10px;
-          margin-top: 10px;
-          
-        ">
-            <div style="
-            text-transform: uppercase;
-            font-size: 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-          ">
-              <h3>photoshop</h3>
-              <h3>didgital marketing</h3>
-              <h3>java</h3>
-              <h3>php</h3>
-            </div>
-            <div style="
-            display: flex;
-            flex-direction: column;
-            gap: 29px;
-            font-size: 12px;
-            color: gray;
-          ">
-              <div style="width: 100%; height: 10px; background-color: #2d3436;">
-                <div style="width: 30%; height: 10px; background-color: #1abc9c;"></div>
+          <div style="   display: grid;   grid-template-columns: 170px auto; gap: 10px;  padding: 10px;  margin-top: 10px; ">
+            <?php
+            for ($i = 0; $i < count($data->skills); $i++) {
+              switch ($data->skills[$i]->skill_per) {
+                case 'Beginner':
+                  $val = 25;
+                  break;
+                case 'Skillful':
+                  $val = 50;
+                  break;
+                case 'Experienced':
+                  $val = 75;
+                  break;
+                case 'Expert':
+                  $val = 98;
+                  break;
+                default:
+                  $val = 10;
+                  break;
+              }
+            ?>
+              <div>
+                <h4><?= ucfirst($data->skills[$i]->skill) ?></h4>
               </div>
-              <!--  -->
-              <div style="width: 100%; height: 10px; background-color: #2d3436;">
-                <div style="width: 30%; height: 10px; background-color: #1abc9c;"></div>
+              <div style="width: 100%; height: 10px; background-color: #2d3436;align-self:center">
+                <div style="width: <?= $val . "%" ?>; height: 10px; background-color: #1abc9c;"></div>
               </div>
-              <!--  -->
-              <div style="width: 100%; height: 10px; background-color: #2d3436;">
-                <div style="width: 30%; height: 10px; background-color: #1abc9c;"></div>
-              </div>
-              <!--  -->
-              <div style="width: 100%; height: 10px; background-color: #2d3436;">
-                <div style="width: 30%; height: 10px; background-color: #1abc9c;"></div>
-              </div>
-            </div>
+
+            <?php
+            }
+            ?>
           </div>
 
         </div>

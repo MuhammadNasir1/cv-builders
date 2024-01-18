@@ -14,27 +14,27 @@ include('includes/navbar.php')
     <div class="row">
       <div class="col-lg-6  col-md-7">
         <div class="heading">
-          <h2>We deliver a professional</h2>
+          <h2><?= $translations['We deliver a professional'] ?></h2>
           <h1>
-            <span class="typewrite" data-period="2000" data-type='[ "CV", "Resume" ]'>
+            <span class="typewrite" data-period="2000" data-type='[ " <?= $translations['CV'] ?>", " <?= $translations['Resume'] ?>" ]'>
               <span class="wrap"></span>
-            </span> For Free
+            </span>  <?= $translations['For Free'] ?>
           </h1>
-          <p>Create your CV with different types of templates , color <span class="heading_br"><br></span>
-            combinations and customization</p>
+          <p><?= $translations['Create your CV with different types of templates , color '] ?> <span class="heading_br"><br></span>
+             <?= $translations['combinations and customization'] ?></p>
           <div>
             <?php
 
 
             if (@$_SESSION["loginemail"]) {
             ?>
-              <a href="./showtemplates"> <button>Show templates</button></a>
-              <a href="./personal_info"> <button class="cv-btn">Create Here</button></a>
+              <a href="./showtemplates"> <button> <?= $translations['Show templates'] ?></button></a>
+              <a href="./personal_info"> <button class="cv-btn"> <?= $translations['Create Here'] ?></button></a>
             <?php
             } else {
             ?>
-              <a href="./sign_up"> <button>Show templates</button></a>
-              <a href="./sign_up"> <button class="cv-btn">Create Here</button></a>
+              <a href="./sign_up"> <button> <?= $translations['Show templates'] ?></button></a>
+              <a href="./sign_up"> <button class="cv-btn">Create Here <?= $translations['Create Here'] ?></button></a>
             <?php
             }
             ?>
@@ -61,7 +61,7 @@ include('includes/navbar.php')
 
   <!-- =========== heading-Start ============  -->
   <div class="datails-sec">
-    <h3>Create professional Resume or CV with <span>100+</span> <span class="remove"><br></span> templates and customize the <span class="remove"><br></span> colors and fonts</h3>
+    <h3> <?= $translations['Create professional Resume or CV with'] ?>  <span>100+</span> <span class="remove"><br></span>  <?= $translations['templates and customize the'] ?> <span class="remove"><br></span>   <?= $translations['colors and fonts'] ?></h3>
 
     <!-- =========== heading-End =============  -->
     <div class="container-fluid mt-5">
@@ -85,7 +85,7 @@ include('includes/navbar.php')
               <div class="box-1">
                 <div class="text">
                   <i class='bx bxs-download'></i>
-                  <h2>Easy to Download</h2>
+                  <h2> <?= $translations['Easy to Download'] ?></h2>
                 </div>
               </div>
 
@@ -95,7 +95,7 @@ include('includes/navbar.php')
               <div class="box-1 mt-4">
                 <div class="text">
                   <i class='bx bxs-file-blank'></i>
-                  <h2>Best Premium template</h2>
+                  <h2><?= $translations['Best Premium template'] ?> </h2>
                 </div>
               </div>
               <!-- =========== details-box-2-End ===============  -->
@@ -104,7 +104,7 @@ include('includes/navbar.php')
               <div class="box-1 mt-4">
                 <div class="text">
                   <i class='bx bxs-edit'></i>
-                  <h2>Fully Customization</h2>
+                  <h2><?= $translations['Fully Customization'] ?></h2>
                 </div>
               </div>
               <!-- =========== details-box-3-End ===============  -->
@@ -121,18 +121,18 @@ include('includes/navbar.php')
 <div class="container-fluid p-0 mt-4">
   <div class="fix-bg">
     <div class="txt">
-      <h1>"Select your favourite template and create your
-        <span class="remove"><br></span>professional CV or Resume.
+      <h1>"<?= $translations['Select your favourite template and create your'] ?> 
+        <span class="remove"><br></span><?= $translations['professional CV or Resume.'] ?>
       </h1>
       <?php
       if (@$_SESSION["loginemail"]) {
       ?>
-        <a href="./personal_info"> <button class="btn mt-3">Create</button></a>
+        <a href="./personal_info"> <button class="btn mt-3"><?= $translations['Create'] ?></button></a>
 
       <?php
       } else {
       ?>
-        <a href="./sign_up"> <button class="btn mt-3">Create</button></a>
+        <a href="./sign_up"> <button class="btn mt-3"><?= $translations['Create'] ?></button></a>
       <?php
       }
       ?>
@@ -145,7 +145,7 @@ include('includes/navbar.php')
 <!-- ================ Templates-start ==================== -->
 <div class="container-fluid mt-5 p-0">
   <div class="template-heading">
-    <h1>Our Famous Recommendation</h1>
+    <h1><?= $translations['Our Famous Recommendation'] ?></h1>
     <div id="myCarousel" class="carousel slide container-fluid" data-bs-ride="carousel">
       <div class="carousel-inner w-100">
         <div class="carousel-item active">
@@ -203,25 +203,25 @@ include('includes/navbar.php')
         <div class="col-md-3">
           <div class="downloads-number">
             <h1><span class="num" data-val="35">0</span>K+</h1>
-            <h3>Downloads</h3>
+            <h3><?= $translations['Downloads'] ?></h3>
           </div>
         </div>
         <div class="col-md-3">
           <div class="downloads-number">
             <h1><span class="num" data-val="20">0</span>K+</h1>
-            <h3>Users</h3>
+            <h3><?= $translations['Users'] ?></h3>
           </div>
         </div>
         <div class="col-md-3">
           <div class="downloads-number">
             <h1><span class="num" data-val="100">0</span>K+</h1>
-            <h3>Templete</h3>
+            <h3><?= $translations['Templete'] ?></h3>
           </div>
         </div>
         <div class="col-md-3">
           <div class="downloads-number">
             <h1><span class="num" data-val="100">0</span>K+</h1>
-            <h3>Download</h3>
+            <h3><?= $translations['Download'] ?></h3>
           </div>
         </div>
       </div>
@@ -234,27 +234,22 @@ include('includes/navbar.php')
 <div class="container-fluid">
   <div class="tips-content">
     <div class="tip-sec-txt">
-      <h1>Recommendation to create a professional <br> <span> Resume or CV </span></h1>
-      <p>Use <span style="color:#283593">premium</span> templates for free with a lot of color schemes</p>
+      <h1> <?= $translations['Recommendation to create a professional'] ?><br> <span> <?= $translations['Resume or CV'] ?> </span></h1>
+      <p><?= $translations['Use premium templates for free with a lot of color schemes'] ?></p>
       <div class="list">
         <ul>
-          <li><strong>Proofread carefully:</strong> Check your resume for spelling and grammar errors, and have someone else review it as well.</li>
-          <li>Use keywords: Many companies use software to scan resumes for keywords. Make sure to include relevant
-            keywords from the job description.</li>
+          <li><strong><?= $translations['Proofread carefully'] ?>:</strong><?= $translations['Check your resume for spelling and grammar errors, and have someone else review it as well.'] ?> </li>
+          <li><?= $translations['homelist1'] ?></li>
 
-          <li><strong>Be honest:</strong> Don't exaggerate your qualifications or experience, and be prepared to back up any claims
-            you make on your resume.</li>
+          <li><strong><?= $translations['Be honest'] ?>:</strong> <?= $translations['homelist2'] ?></li>
 
-          <li><strong>Make it easy to contact you:</strong> Include your name, phone number, email address, and LinkedIn profile (if you have one) at the top of your resume.</li>
+          <li><strong><?= $translations['Make it easy to contact you'] ?>:</strong><?= $translations['homelist3'] ?> </li>
 
-          <li><strong>Keep it concise and well-organized:</strong> Your resume should be easy to read and should not exceed two pages.
-            Use bullet points and clear headings to break up the text</li>
+          <li><strong><?= $translations['Keep it concise and well-organized'] ?></strong>: <?= $translations['homelist4'] ?></li>
 
-          <li><strong>Use a professional format:</strong> Choose a clean and modern font, and stick to a professional format. Use a
-            template if you're unsure where to start.</li>
+          <li><strong><?= $translations['Use a professional format'] ?>:</strong> <?= $translations['homelist5'] ?></li>
 
-          <li><strong>Customize your resume for each job:</strong> Tailor your resume to the job you're applying for by highlighting the
-            skills and experience that match the job description.</li>
+          <li><strong><?= $translations['Customize your resume for each job'] ?></strong>: <?= $translations['homelist6'] ?></li>
 
         </ul>
       </div>
@@ -270,19 +265,19 @@ include('includes/navbar.php')
       <div class="col-md-6">
         <div class="anim-sec-txt">
           <div>
-            <h1>Create your professional Resume or CV with <span class="remove"><br></span><span>CV Builders</span></h1>
-            <p>Follow the simple steps and create a professional and <span class="remove"><br></span> polished cv or resume in minutes.</p>
+            <h1><?= $translations['Create your professional Resume or CV with'] ?><span class="remove"><br></span><span>CV Builders</span></h1>
+            <p> <?= $translations['Follow the simple steps and create a professional and'] ?><span class="remove"><br></span> <?= $translations['polished cv or resume in minutes.'] ?></p>
 
             <?php
             if (@$_SESSION["loginemail"]) {
             ?>
-              <a href="./personal_info"> <button class="">Create your Cv</button></a>
+              <a href="./personal_info"> <button class=""><?= $translations['Create your Cv'] ?></button></a>
 
             <?php
             } else {
 
             ?>
-              <a href="./sign_up"> <button class="">Create your Cv</button></a>
+              <a href="./sign_up"> <button class=""><?= $translations['Create your Cv'] ?></button></a>
             <?php
             }
             ?>
@@ -342,9 +337,9 @@ if (@$_SESSION["loginemail"]) {
 
       <div class="modal-body ">
         <h1 style=" cursor: pointer;" class="float-end text-gray" data-bs-dismiss="modal" aria-label="Close"><i class='bx bx-x'></i></h1>
-        <h2 class="mt-4">SIGN UP <span style="color:black" ;>Free</span></h2>
-        <p class="mt-2">Sign in or Sign up now and create your professional CV or Resume in an easy way.</p>
-        <center><a href="./sign_in "><button>SIGN IN</button></a></center>
+        <h2 class="mt-4"><?= $translations['SIGN UP'] ?><span style="color:black"><?= $translations['Free'] ?></span></h2>
+        <p class="mt-2"><?= $translations['Sign in or Sign up now and create your professional CV or Resume in an easy way.'] ?></p>
+        <center><a href="./sign_in "><button><?= $translations['SIGN IN'] ?></button></a></center>
       </div>
 
     </div>
