@@ -34,7 +34,7 @@ include('includes/navbar.php')
             } else {
             ?>
               <a href="./sign_up"> <button> <?= $translations['Show templates'] ?></button></a>
-              <a href="./sign_up"> <button class="cv-btn">Create Here <?= $translations['Create Here'] ?></button></a>
+              <a href="./sign_up"> <button class="cv-btn"><?= $translations['Create Here'] ?></button></a>
             <?php
             }
             ?>

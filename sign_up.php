@@ -42,7 +42,7 @@ if (isset($_REQUEST['submit'])) {
 <!-- ====alert=== -->
 <div style="position:absolute; top:20px; right:10px; background:#C21010; color:white; z-index:999;" class="toast <?= @$salert ?>" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-body">
-    <h6 class="p-0 m-0  d-flex align-items-center"><i class="fa-solid fa-circle-check me-2" style="color: green; font-size:25px"></i> Sign Up Successfully</h6>
+    <h6 class="p-0 m-0  d-flex align-items-center"><i class="fa-solid fa-circle-check me-2" style="color: green; font-size:25px"></i><?= $translations['Sign Up Successfully']  ?> </h6>
   </div>
 </div>
 
@@ -61,7 +61,7 @@ if (isset($_REQUEST['submit'])) {
           <div class="sign-txt signup-txt">
             <h4 class="signup-heading"><?= $translations['Sign Up'] ?></h4>
             <h3><?= $translations['If you have an account']  ?></h3>
-            <h3><?= $translations['You Can']  ?><a href="./sign_in"><?= $translations['login here']  ?> !</a></h3>
+            <h3><?= $translations['You Can']  ?><a href="./sign_in"> <?= $translations['login here']  ?> !</a></h3>
           </div>
           <!-- ==========form-start=========== -->
           <div class="form-section">
@@ -74,7 +74,7 @@ if (isset($_REQUEST['submit'])) {
                 </div>
                 <div class="mb-3   position-relative">
                   <img class="input-icons" src="./image/email-icons.svg" alt="Email">
-                  <label for="email" class="form-label">Email<?= $translations['Sign in']  ?></label>
+                  <label for="email" class="form-label"><?= $translations['Email']  ?></label>
                   <input <?php echo @$input_red ?> name="email" type="email" class="form-control" id="email" required placeholder="<?= $translations['Enter your email address']  ?>">
                   <span class="" style="margin-left:95%; margin-top:-28px ;  position: absolute;"><?php echo  @$showeror ?></span>
                   <div style="color:#C21010; letter-spacing:0.3px " class="form-text"><b><?php echo  @$showError ?></b></div>

@@ -199,7 +199,7 @@ include("includes/navbar.php");
                   <input name="hoby_id" type="hidden" value="<?= $dta['hobbies_id'] ?>">
                   <div class="py-3 mt-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                     <div class="my-3 position-relative">
-                      <h5 class="headinf">Hobby</h5>
+                      <h5 class="headinf"><?= $translations['Hobby'] ?></h5>
                       <a href="hob_lan_ref?delh=<?= $dta['hobbies_id'] ?>">
                         <h5 class="position-absolute" style="right: 20px; top:-8px; cursor: pointer;"><i style="color:#c21010;" class="fa-solid fa-x"></i></h5>
                       </a>
@@ -209,7 +209,7 @@ include("includes/navbar.php");
                         <div class="col-md-12">
                           <div id="referad">
                             <div class="input-field mt-3 ">
-                              <label>Hobby</label>
+                              <label><?= $translations['Hobby'] ?></label>
                               <input name="hobby[]" id="hobby" type="text" value="<?= $dta['hobby'] ?>" required>
                             </div>
                           </div>
@@ -226,14 +226,14 @@ include("includes/navbar.php");
                 <!-- ==================hobby-section-Start========================== -->
                 <div class="py-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                   <div class="my-3 position-relative">
-                    <h5 class="headinf">Hobbies</h5>
+                    <h5 class="headinf"><?= $translations['Hobby'] ?></h5>
                   </div>
                   <div class="container-fluid">
                     <div class="row">
                       <div class="col-md-12">
                         <div id="referad">
                           <div class="input-field mt-3 ">
-                            <label>Hobby</label>
+                            <label><?= $translations['Hobby'] ?></label>
                             <input name="hobby[]" id="hobby" type="text" required>
                           </div>
                         </div>
@@ -253,7 +253,7 @@ include("includes/navbar.php");
               </div>
               <!-- ======================virtual-sec================ -->
               <div class="form-buttons d-flex justify-content-end">
-                <button id="add_hobby" style="padding:8px 12px; border-radius:40px;" class="btn btn-danger   mt-4  me-2" type="button"> <i class="fa-solid fa-plus"></i> Add Hobby</button>
+                <button id="add_hobby" style="padding:8px 12px; border-radius:40px;" class="btn btn-danger   mt-4  me-2" type="button"> <i class="fa-solid fa-plus"></i> <?= $translations['Add Hobby'] ?></button>
               </div>
 
               <script>
@@ -273,7 +273,7 @@ include("includes/navbar.php");
                   newhob.innerHTML = ` 
                     <div class="py-3 mt-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                   <div class="my-3 position-relative">
-                    <h5 class="headinf">Hobbies</h5>
+                    <h5 class="headinf"><?= $translations['Hobby'] ?></h5>
                     <h5 onclick="removehob('#hobyrem_${hid}')" class="position-absolute" style="right: 20px; top:-8px; cursor: pointer;"><i style="color:#c21010;" class="fa-solid fa-x"></i></h5>
                   </div>
                   <div class="container-fluid">
@@ -281,7 +281,7 @@ include("includes/navbar.php");
                       <div class="col-md-12">
                         <div id="referad">
                           <div class="input-field mt-3 ">
-                          <label>Hobby</label>
+                          <label><?= $translations['Hobby'] ?></label>
                             <input name="hobby[]" id="hobby" type="text" required>
                           </div>
                         </div>
@@ -301,7 +301,7 @@ include("includes/navbar.php");
                     <input type="hidden" name="lan_ids" id="" value="<?= $data['lang_id'] ?>">
                     <div class="py-3 mt-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                       <div class="my-3 position-relative">
-                        <h5 class="headinf">Language</h5>
+                        <h5 class="headinf"><?= $translations['Language'] ?></h5>
                         <a href="hob_lan_ref?dellan=<?= $data['lang_id'] ?>">
                           <h5 class="position-absolute" style="right: 20px; top:-8px; cursor: pointer; "><i style="color:#c21010;" class="fa-solid fa-x"></i></h5>
                         </a>
@@ -310,7 +310,7 @@ include("includes/navbar.php");
                         <div class="row">
                           <div class="col-md-12">
                             <div class="input-field mt-3 ">
-                              <label>Language</label>
+                              <label><?= $translations['Language'] ?></label>
                               <input name="languge[]" id="lan" type="text" value="<?= $data['language'] ?>" required>
                             </div>
                           </div>
@@ -325,13 +325,13 @@ include("includes/navbar.php");
                   ?>
                   <div class="py-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                     <div class="my-3 position-relative">
-                      <h5 class="headinf">Languages</h5>
+                      <h5 class="headinf"><?= $translations['Language'] ?></h5>
                     </div>
                     <div class="container-fluid">
                       <div class="row">
                         <div class="col-md-12">
                           <div class="input-field mt-3 ">
-                            <label>Language</label>
+                            <label><?= $translations['Language'] ?></label>
                             <input name="languge[]" id="lan" type="text" required>
                           </div>
                         </div>
@@ -351,7 +351,7 @@ include("includes/navbar.php");
               </div>
               <!-- ======================virtual-sec================ -->
               <div class="form-buttons d-flex justify-content-end">
-                <button id="add_language" style="padding:8px 12px; border-radius:40px;" class="btn btn-danger mb-2 mt-4  me-2" type="button"> <i class="fa-solid fa-plus"></i> Add Language</button>
+                <button id="add_language" style="padding:8px 12px; border-radius:40px;" class="btn btn-danger mb-2 mt-4  me-2" type="button"> <i class="fa-solid fa-plus"></i> <?= $translations['Add Language'] ?></button>
               </div>
 
               <script>
@@ -371,14 +371,14 @@ include("includes/navbar.php");
                   newlan.innerHTML = `
                     <div class="py-3 mt-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                   <div class="my-3 position-relative">
-                    <h5 class="headinf">Languages</h5>
+                    <h5 class="headinf"><?= $translations['Language'] ?></h5>
                     <h5 onclick="removehob('#lanrem_${lid}')" class="position-absolute" style="right: 20px; top:-8px; cursor: pointer;"><i style="color:#c21010;" class="fa-solid fa-x"></i></h5>
                   </div>
                   <div class="container-fluid">
                     <div class="row">
                       <div class="col-md-12">
                       <div class="input-field mt-3 ">
-                      <label>Language</label>
+                      <label><?= $translations['Language'] ?></label>
                             <input name="languge[]" id="lan" type="text"  required>
                           </div>
                       </div>
@@ -399,13 +399,13 @@ include("includes/navbar.php");
                 <input type="hidden" name="refe_id" id="" value="<?= @$row['ref_id'] ?>">
                 <div class="py-3 mt-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                   <div class="my-3 position-relative">
-                    <h5 class="headinf">Reference</h5>
+                    <h5 class="headinf"><?= $translations['Reference'] ?></h5>
                   </div>
                   <div class="container-fluid">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="input-field mt-3 ">
-                          <label>Reference</label>
+                          <label><?= $translations['Reference'] ?></label>
                           <input name="reference[]" id="ref" type="text">
                         </div>
                       </div>
@@ -421,7 +421,7 @@ include("includes/navbar.php");
                   <input type="hidden" name="refe_id" id="" value="<?= $row['ref_id'] ?>">
                   <div class="py-3 mt-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                     <div class="my-3 position-relative">
-                      <h5 class="headinf">Reference</h5>
+                      <h5 class="headinf"><?= $translations['Reference'] ?></h5>
                       <a href="hob_lan_ref?delref=<?= $row['ref_id'] ?>">
                         <h5 class="position-absolute" style="right: 20px; top:-8px; cursor: pointer; "><i style="color:#c21010;" class="fa-solid fa-x"></i></h5>
                       </a>
@@ -430,7 +430,7 @@ include("includes/navbar.php");
                       <div class="row">
                         <div class="col-md-12">
                           <div class="input-field mt-3 ">
-                            <label>Reference</label>
+                            <label><?= $translations['Reference'] ?></label>
                             <input name="reference[]" id="ref" type="text" value="<?= $row['user_reference'] ?>">
                           </div>
                         </div>
@@ -444,13 +444,13 @@ include("includes/navbar.php");
                 ?>
                 <div class="py-3 mt-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                   <div class="my-3 position-relative">
-                    <h5 class="headinf">Reference</h5>
+                    <h5 class="headinf"><?= $translations['Reference'] ?></h5>
                   </div>
                   <div class="container-fluid">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="input-field mt-3 ">
-                          <label>Reference</label>
+                          <label><?= $translations['Reference'] ?></label>
                           <input name="reference[]" id="ref" type="text">
                         </div>
                       </div>
@@ -469,7 +469,7 @@ include("includes/navbar.php");
               </div>
               <!-- ======================virtual-sec================ -->
               <div class="form-buttons d-flex justify-content-end">
-                <button id="add_ref" style="padding:8px 12px; border-radius:40px;" class="btn btn-danger   mt-4  me-2" type="button"> <i class="fa-solid fa-plus"></i> Add Reference</button>
+                <button id="add_ref" style="padding:8px 12px; border-radius:40px;" class="btn btn-danger   mt-4  me-2" type="button"> <i class="fa-solid fa-plus"></i> <?= $translations['Add Reference'] ?> </button>
               </div>
 
               <script>
@@ -489,14 +489,14 @@ include("includes/navbar.php");
                   newref.innerHTML = `
                     <div class="py-3 mt-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px;">
                   <div class="my-3 position-relative">
-                    <h5 class="headinf">References</h3>
+                    <h5 class="headinf"><?= $translations['Reference'] ?></h3>
                     <h5 onclick="removehob('#refrem_${rid}')" class="position-absolute" style="right: 20px; top:-8px; cursor: pointer;"><i style="color:#c21010;" class="fa-solid fa-x"></i></h4>
                   </div>
                   <div class="container-fluid">
                     <div class="row">
                       <div class="col-md-12">
                       <div class="input-field mt-3 ">
-                      <label>Reference</label>
+                      <label><?= $translations['Reference'] ?></label>
                             <input name="reference[]" id="lan" type="text" >
                           </div>
                       </div>
@@ -523,18 +523,11 @@ include("includes/navbar.php");
               <h3>TIPS</h3>
               <div class="text mt-2">
                 <ul>
-                  <li><strong>Select Relevant Hobbies:</strong> Choose hobbies that align with the skills or qualities valued
-                    in the job you're applying for. For example, if the position requires teamwork, you can
-                    mention team sports or collaborative hobbies.</li>
-                  <li><strong>Variety:</strong> Include a diverse range of hobbies to present a well-rounded personality. This can showcase
-                    your ability to balance work and personal interests effectively.</li>
-                  <li><strong>Showcase Transferable Skills:</strong> Highlight hobbies that demonstrate transferable skills such as
-                    leadership, creativity, problem-solving, or organization.</li>
-                  <li><strong>Relevance:</strong> Highlight languages that are relevant to the job or industry you're applying for.
-                    If you're bilingual or multilingual, emphasize your language skills as they can be valuable assets.</li>
-                  <li><strong>Include Upon Request:</strong> Instead of providing specific references on your CV or resume, simply state "References
-                    available upon request." This keeps your document concise and allows you to provide references when requested by
-                    the employer.</li>
+                  <li><strong><?= $translations['Select Relevant Hobbies'] ?>:</strong><?= $translations['lanhublist1'] ?> </li>
+                  <li><strong><?= $translations['Variety'] ?>:</strong><?= $translations['lanhublist2'] ?> </li>
+                  <li><strong><?= $translations['Showcase Transferable Skills'] ?>:</strong> <?= $translations['lanhublist3'] ?></li>
+                  <li><strong><?= $translations['Relevance'] ?>:</strong> <?= $translations['lanhublist4'] ?></li>
+                  <li><strong><?= $translations['Include Upon Request'] ?>:</strong> <?= $translations['lanhublist5'] ?></li>
                 </ul>
               </div>
             </div>
@@ -558,7 +551,7 @@ include("includes/navbar.php");
   <section style="background-color: #C21010">
     <div class=" d-flex justify-content-between pe-3  ps-3">
       <div class="social-icon-heading">
-        <p>Our social media handles:</p>
+        <p> <?= $translations['Our social media handles'] ?>:</p>
       </div>
       <div class="icons pt-1">
         <a href="#"><i class='bx bxl-facebook'></i></a>
@@ -569,7 +562,7 @@ include("includes/navbar.php");
     </div>
   </section>
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-    © 2023 Copyright:The Product By
+    © 2023 <?= $translations['Copyright:The Product By'] ?>
     <a class="text-white" href="https://thewebconcept.com/">thewebconcept.com</a>
   </div>
 </footer>

@@ -56,7 +56,7 @@ if (mysqli_num_rows($checkdata) == 1) {
   $db_img = "<label for='files'><i class='bx bxs-user'></i><span id='imagePreview'></span> <img id='upd_img' style='width: 150px; height:150px; border-radius: 50%;' src='./uploads/images/" . $per_det['user_img'] . "'></label>";
 } else {
   $buttontext = $translations['Save'];
-  $db_img = "<label  for='files'><i class='bx bxs-user'></i><span id='imagePreview'></span></label>";
+  $db_img = "<label  for='files' ><i class='bx bxs-user'></i><span id='imagePreview'></span></label>";
 }
 
 include("./includes/navbar.php");

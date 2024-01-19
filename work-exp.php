@@ -48,12 +48,13 @@ if (isset($_POST['submit'])) {
   }
 }
 
+include("includes/header.php");
 $checkdata = mysqli_query($conn, "SELECT * FROM work_exp WHERE user_id = '" . $_SESSION['user_id'] . "' ");
 if (mysqli_num_rows($checkdata)  >=  1) {
   $getdata = true;
-  $buttontext = "Update";
+  $buttontext = $translations['Next'];
 } else {
-  $buttontext = "Next";
+  $buttontext = $translations['Save'];
   $getdata = false;
 }
 
@@ -69,7 +70,6 @@ if (@$_REQUEST['del']) {
 ?>
 
 <?php
-include("includes/header.php");
 include("./includes/navbar.php")
 ?>
 <style>
@@ -82,17 +82,17 @@ include("./includes/navbar.php")
   <div class="progres-bar">
     <div class="progress-sec mt-4">
       <div class="progressbarss">
-        <a style="color: black;" href="./personal_info">
-          <p><span style="color:white; border-color:green;     background:green;">1</span> <bdo class="form_progress_txt">Persanal Information</bdo></p>
+        <a style="color: black;" href="./personal_info.php">
+          <p><span style="color:white; border-color:green;     background:green;">1</span> <bdo class="form_progress_txt"><?= $translations['Persanal Information'] ?></bdo></p>
         </a>
-        <a style="color: black;" href="./edu_skill">
-          <p><span style="color:white; border-color:green;     background:green;">2</span><bdo class="form_progress_txt">Education/Skills</bdo> </p>
+        <a style="color: black;" href="./edu_skill.php">
+          <p><span style="color:white; border-color:green;     background:green;">2</span><bdo class="form_progress_txt"><?= $translations['Education/Skill'] ?></bdo> </p>
         </a>
-        <a style="color: black;" href="./work-exp">
-          <p><span style="color:white;     background:#C21010;">3</span><bdo class="form_progress_txt">Working Experience</bdo> </p>
+        <a style="color: black;" href="./work-exp.php">
+          <p><span style="color:white;     background:#C21010;">3</span><bdo class="form_progress_txt"><?= $translations['Working Experience'] ?></bdo> </p>
         </a>
-        <a href="./hob_lan_ref">
-          <p><span>4</span><bdo class="form_progress_txt">Languages/Reference</bdo> </p>
+        <a href="./hob_lan_ref.php">
+          <p><span>4</span><bdo class="form_progress_txt"><?= $translations['Languages/Reference'] ?></bdo> </p>
         </a>
       </div>
     </div>
@@ -117,7 +117,7 @@ include("./includes/navbar.php")
               ?>
                   <div class="py-3 mt-4" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px; ">
                     <div class="my-3 position-relative">
-                      <h5 class="headinf">Working Experience</h5>
+                      <h5 class="headinf"><?= $translations['Working Experience'] ?></h5>
                       <a href="work-exp?del=<?= $work_det['work_exp_id'] ?>">
                         <h5 class="position-absolute" style="right: 20px; top:-8px; cursor: pointer; color:red"><i style="color:#c21010;" class="fa-solid fa-x"></i></h5>
                       </a>
@@ -133,7 +133,7 @@ include("./includes/navbar.php")
                             <!-- ============Company Name============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-4 ">
-                                <label>Company Name</label>
+                                <label><?= $translations['Company Name'] ?></label>
                                 <input name="company_name[]" id="com_name" type="text" value="<?= $work_det['company_name'] ?>">
                               </div>
                             </div>
@@ -141,14 +141,14 @@ include("./includes/navbar.php")
                             <div class="col-md-6">
 
                               <div class="input-field mt-4 ">
-                                <label>Role </label>
+                                <label><?= $translations['Role'] ?> </label>
                                 <input name="work_role[]" id="role" type="text" value="<?= $work_det['role'] ?>">
                               </div>
                             </div>
                             <!-- ============Start-Date============ -->
                             <div class="col-md-6">
                               <div class="input-field mt-4 ">
-                                <label>Start Date</label>
+                                <label><?= $translations['Start Date'] ?></label>
                                 <input name="work_st_date[]" id="start_date" type="month" value="<?= $work_det['work_st_data'] ?>">
                               </div>
                             </div>
@@ -156,7 +156,7 @@ include("./includes/navbar.php")
                             <div class="col-md-6 ">
                               <div class="input-field mt-4 d-flex position-relative ">
                                 <div>
-                                  <label>End Date</label>
+                                  <label><?= $translations['End Date'] ?></label>
                                   <input style="width: 100%;" name="work_end_date[]" id="end_date" type="month" value="<?= $work_det['work_end_date'] ?>">
                                 </div>
                                 <?php
@@ -169,7 +169,7 @@ include("./includes/navbar.php")
                                 }
                                 ?>
                                 <div>
-                                  <label>Present</label>
+                                  <label><?= $translations['Present'] ?></label>
                                   <input <?= $checked ?> type="checkbox" style="width: 100%;" id="checkbox<?= $a ?>" onchange="updateInputField(this)">
                                   <input type="hidden" id="inputField<?= $a ?>" name="present[]" value="<?= $work_det['present'] ?>" readonly>
                                 </div>
@@ -179,9 +179,9 @@ include("./includes/navbar.php")
                             <div class="col-md-12">
 
                               <div class="input-field mt-4 ">
-                                <label>Working Details</label>
+                                <label><?= $translations['Working Details'] ?></label>
                                 <textarea maxlength="180" name="work_city_coun[]" class="form-control" id="Feild" rows="4"><?= $work_det['city_country'] ?></textarea>
-                                <div class="form-text about-us-txt">Enter yout work details in less than <b>180</b> Letters</div>
+                                <div class="form-text about-us-txt"><?= $translations['Enter yout work details in less than'] ?> <b>180</b><?= $translations['Letters'] ?> </div>
                               </div>
                             </div>
                             <!-- ============Country============ -->
@@ -198,7 +198,7 @@ include("./includes/navbar.php")
                 ?>
                 <div class="py-3 mt-3" style=" box-shadow:0px 0px 20px 10px #E0E0E0AF; border-radius:20px; ">
                   <div class="my-3 position-relative">
-                    <h5 class="headinf">Working Experience</h5>
+                    <h5 class="headinf"><?= $translations['Working Experience'] ?></h5>
                   </div>
                   <div class="form-info">
 
@@ -211,7 +211,7 @@ include("./includes/navbar.php")
                           <!-- ============Company Name============ -->
                           <div class="col-md-6">
                             <div class="input-field mt-4 ">
-                              <label>Company Name</label>
+                              <label><?= $translations['Company Name'] ?></label>
                               <input name="company_name[]" id="com_name" type="text">
                             </div>
                           </div>
@@ -219,14 +219,14 @@ include("./includes/navbar.php")
                           <div class="col-md-6">
 
                             <div class="input-field mt-4 ">
-                              <label>Role </label>
+                              <label><?= $translations['Role'] ?> </label>
                               <input name="work_role[]" id="role" type="text">
                             </div>
                           </div>
                           <!-- ============Start-Date============ -->
                           <div class="col-md-6">
                             <div class="input-field mt-4 ">
-                              <label>Start Date</label>
+                              <label><?= $translations['Start Date'] ?></label>
                               <input name="work_st_date[]" id="start_date" type="month">
                             </div>
                           </div>
@@ -234,11 +234,11 @@ include("./includes/navbar.php")
                           <div class="col-md-6 ">
                             <div class="input-field mt-4 d-flex position-relative ">
                               <div>
-                                <label>End Date</label>
+                                <label><?= $translations['End Date'] ?></label>
                                 <input style="width: 100%;" name="work_end_date[]" id="end_date" type="month">
                               </div>
                               <div>
-                                <label>Present</label>
+                                <label><?= $translations['Present'] ?></label>
                                 <input type="checkbox" style="width: 100%;" id="checkbox2" onchange="updateInputField(this)">
                                 <input type="hidden" id="inputField2" name="present[]" value="0" readonly>
                               </div>
@@ -249,9 +249,9 @@ include("./includes/navbar.php")
                           <div class="col-md-12">
 
                             <div class="input-field mt-4 ">
-                              <label>Working Details</label>
+                              <label><?= $translations['Working Details'] ?></label>
                               <textarea maxlength="180" name="work_city_coun[]" class="form-control" id="Feild" rows="4"></textarea>
-                              <div class="form-text about-us-txt">Enter yout work details in less than <b>180</b> Letters</div>
+                              <div class="form-text about-us-txt"><?= $translations['Enter yout work details in less than'] ?> <b>180</b> <?= $translations['Letters'] ?></div>
                             </div>
                           </div>
                           <!-- ============Country============ -->
@@ -274,7 +274,7 @@ include("./includes/navbar.php")
 
               <!-- =====virtual data====== -->
               <div class="form-buttons">
-                <button id="add_word_btn" style="padding:8px 12px; border-radius:40px;" class="btn btn-danger  float-end mt-4  me-2" type="button"> <i class="fa-solid fa-plus"></i> Add work Experience</button>
+                <button id="add_word_btn" style="padding:8px 12px; border-radius:40px;" class="btn btn-danger  float-end mt-4  me-2" type="button"> <i class="fa-solid fa-plus"></i><?= $translations['Add work Experience'] ?> </button>
               </div>
 
 
@@ -306,30 +306,30 @@ include("./includes/navbar.php")
                         <div class="row">
                           <div class="col-md-6">
                             <div class="input-field mt-4 ">
-                            <label>Company Name</label>
+                            <label><?= $translations['Company Name'] ?></label>
                               <input name="company_name[]" id="com_name" type="text">
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="input-field mt-4 ">
-                            <label>Role </label>
+                            <label><?= $translations['Role'] ?> </label>
                               <input name="work_role[]" id="role" type="text">
                             </div>
                           </div>
                           <div class="col-md-6">
                             <div class="input-field mt-4 ">
-                            <label>Start Date</label>
+                            <label><?= $translations['Start Date'] ?></label>
                               <input name="work_st_date[]" id="start_date" type="month">
                             </div>
                           </div>
                           <div class="col-md-6 ">
                                 <div class="input-field mt-4 d-flex position-relative ">
                                 <div>
-                                <label>End Date</label>
+                                <label><?= $translations['End Date'] ?></label>
                                 <input style="width: 100%;" name="work_end_date[]" id="end_date" type="month">
                                 </div>
                                 <div>
-                                <label>Present</label>
+                                <label><?= $translations['Present'] ?></label>
                                 <input type="checkbox" style="width: 100%;" id="checkbox${wid}" onchange="updateInputField(this)">
                                 <input type="hidden" id="inputField${wid}" name="present[]" value="0" readonly>
                               </div>
@@ -337,9 +337,9 @@ include("./includes/navbar.php")
                               </div>
                           <div class="col-md-12">
                             <div class="input-field mt-4 ">
-                            <label>Working Details</label>
+                            <label><?= $translations['Working Details'] ?></label>
                               <textarea maxlength="180" name="work_city_coun[]" class="form-control" id="Feild" rows="4"></textarea>
-                                  <div class="form-text about-us-txt">Enter yout work details in less than <b>180</b> Letters</div>
+                                  <div class="form-text about-us-txt"><?= $translations['Enter yout work details in less than'] ?> <b>180</b> <?= $translations['Letters'] ?></div>
                             </div>
                           </div>
                         </div>
@@ -354,7 +354,7 @@ include("./includes/navbar.php")
               </script>
               <div class="form-buttons mb-5 " style="margin-top: 100px;">
 
-                <a href="./edu_skill"> <button type="button" class="btn btn-danger  save-btn  add-det-btn"> Previous</button></a>
+                <a href="./edu_skill"> <button type="button" class="btn btn-danger  save-btn  add-det-btn"> <?= $translations['Previous'] ?></button></a>
                 <button name="submit" type="submit" class="btn btn-danger float-end save-btn  add-det-btn"> <?= $buttontext ?></button>
               </div>
             </div>
@@ -367,9 +367,9 @@ include("./includes/navbar.php")
               <h3>TIPS</h3>
               <div class="text mt-2">
                 <ul>
-                  <li><strong>Be Honest:</strong> Provide accurate and truthful information about your work experience. Avoid exaggeration or misrepresentation as it can be detrimental to your professional reputation.</li>
-                  <li><strong>Use Keywords:</strong> Incorporate industry-specific keywords and phrases throughout your work experience section to align your resume with the job description and optimize it for applicant tracking systems (ATS).</li>
-                  <li><strong>Reverse Chronological Order:</strong> Start with your most recent or current position and work backward chronologically. This format is the most common and helps employers quickly see your recent experience.</li>
+                  <li><strong><?= $translations['Be Honest'] ?>:</strong><?= $translations['worklis1'] ?> </li>
+                  <li><strong><?= $translations['Use Keywords'] ?>:</strong><?= $translations['worklis3'] ?> Incorporate industry-specific keywords and phrases throughout your work experience section to align your resume with the job description and optimize it for applicant tracking systems (ATS).</li>
+                  <li><strong><?= $translations['Reverse Chronological Order'] ?>:</strong><?= $translations['worklis3'] ?> </li>
                 </ul>
               </div>
             </div>
@@ -387,11 +387,11 @@ include("./includes/navbar.php")
 </form>
 <!-- ================ Footer-Start ======================= -->
 
-<footer class="text-center text-lg-start text-white " style="background-color: black; margin-top:8rem">
+<footer class="text-center text-lg-start text-white " style="background-color: black; margin-top:4rem">
   <section style="background-color: #C21010">
     <div class=" d-flex justify-content-between pe-3  ps-3">
       <div class="social-icon-heading">
-        <p>Our social media handles:</p>
+        <p> <?= $translations['Our social media handles'] ?>:</p>
       </div>
       <div class="icons pt-1">
         <a href="#"><i class='bx bxl-facebook'></i></a>
@@ -402,7 +402,7 @@ include("./includes/navbar.php")
     </div>
   </section>
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-    © 2023 Copyright:The Product By
+    © 2023 <?= $translations['Copyright:The Product By'] ?>
     <a class="text-white" href="https://thewebconcept.com/">thewebconcept.com</a>
   </div>
 </footer>

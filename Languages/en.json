@@ -2,6 +2,8 @@
   "Sign in": "Sign in",
   "Sign Up": "Sign Up",
   "login here": "login here",
+  "Email not match": "Email not match",
+  "Sign Up Successfully": "Sign Up Successfully",
   "If you Don't have an account": "If you Don't have an account",
   "You Can": "You can",
   "Register here": "Register here",
@@ -170,8 +172,39 @@
   "Expert": "Expert",
   "Skill level": "Skill level",
   "Add Skill": "Add Skill",
-
-
+  
+  
+  
+  "Enter yout work details in less than": "Enter yout work details in less than",
+  "Role": "Role",
+  "Company Name": "Company Name",
+  "Working Details": "Working Details",
+  "Add work Experience": "Add work Experience",
+  "Previous": "Previous",
+  "Be Honest": "Be Honest",
+  "worklis1": "Provide accurate and truthful information about your work experience. Avoid exaggeration or misrepresentation as it can be detrimental to your professional reputation.",
+  "worklis2": "Incorporate industry-specific keywords and phrases throughout your work experience section to align your resume with the job description and optimize it for applicant tracking systems (ATS).",
+  "Reverse Chronological Order": "Reverse Chronological Order",
+  "worklis3": "Start with your most recent or current position and work backward chronologically. This format is the most common and helps employers quickly see your recent experience.",
+  
+  
+  "Hobby": "Hobby",
+  "Add Hobby": "Add Hobby",
+  "Language": "Language",
+  "Add Language": "Add Language",
+  "Reference": "Reference",
+  "Add Reference": "Add Reference",
+  "Select Relevant Hobbies": "Select Relevant Hobbies",
+  "lanhublist1": "Choose hobbies that align with the skills or qualities valued   in the job you're applying for. For example, if the position requires teamwork, you can    mention team sports or collaborative hobbies.",
+  
+  "Variety": "Variety",
+  "lanhublist2": "Include a diverse range of hobbies to present a well-rounded personality. This can showcase your ability to balance work and personal interests effectively.",
+  "Showcase Transferable Skills": "Showcase Transferable Skills",
+  "lanhublist3": "Highlight hobbies that demonstrate transferable skills such as leadership, creativity, problem-solving, or organization.",
+  "Relevance": "Relevance",
+  "lanhublist4": "Highlight languages that are relevant to the job or industry you're applying for. If you're bilingual or multilingual, emphasize your language skills as they can be valuable assets.",
+  "Include Upon Request": "Include Upon Request",
+  "lanhublist5": "Instead of providing specific references on your CV or resume, simply state References  available upon request. This keeps your document concise and allows you to provide references when requested by the employer.",
 
   
   "Show cv templates": "Show cv templates"

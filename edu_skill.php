@@ -454,7 +454,7 @@ include("./includes/navbar.php");
                           <div class="input-field mb-4">
                             <label class="ms-2"> <?= $translations['Skill level'] ?></label>
                             <select name="skill_range[]" class="form-select gender-option">
-                              <option value="Beginner" <?= ($row['skill_per'] == 'Beginner') ? 'selected' : '' ?>></option>
+                              <option value="Beginner" <?= ($row['skill_per'] == 'Beginner') ? 'selected' : '' ?>><?= $translations['Beginner'] ?></option>
                               <option value="Skillful" <?= ($row['skill_per'] == 'Skillful') ? 'selected' : '' ?>><?= $translations['Skillful'] ?></option>
                               <option value="Experienced" <?= ($row['skill_per'] == 'Experienced') ? 'selected' : '' ?>><?= $translations['Experienced'] ?></option>
                               <option value="Expert" <?= ($row['skill_per'] == 'Expert') ? 'selected' : '' ?>><?= $translations['Expert'] ?></option>
