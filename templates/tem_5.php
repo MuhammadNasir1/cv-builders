@@ -86,7 +86,7 @@
         if ($data->per_info->user_img) {
         ?>
           <div class="circle">
-            <img style="height: 100%; width:100%;   border-radius:50%" src="./uploads/images/<?= $data->per_info->user_img ?>" alt="">
+            <img style="height: 100%; width:100%;   border-radius:50%" src="./uploads/images/<?= $data->per_info->user_img ?>" alt="image">
 
           </div>
         <?php
@@ -129,11 +129,7 @@
                     padding: 5px;
                     color: gray;
                   ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Beatae blanditiis alias suscipit tempora ratione excepturi
-                libero distinctio, incidunt veritatis ad, consequatur
-                repellendus at perferendis cum sed deleniti aliquid quidem
-                obcaecati.
+                <?= ucfirst($data->per_info->about_us) ?>
               </p>
             </div>
           </div>
