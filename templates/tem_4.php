@@ -347,7 +347,7 @@
       <!-- education  -->
       <section class="education">
         <div class="title">
-          <h1>Education</h1>
+          <h1><?= $translations['Education'] ?></h1>
         </div>
         <?php
         for ($i = 0; $i < count($data->education); $i++) {
@@ -382,7 +382,7 @@
       <!-- experience section start -->
       <section class="education">
         <div class="title_experience">
-          <h1>Experience</h1>
+          <h1><?= $translations['Experience'] ?></h1>
         </div>
         <?php
         for ($i = 0; $i < count($data->work_exp); $i++) {
@@ -421,20 +421,20 @@
     <div class="short">
       <section class="contact_main">
         <div class="contact_title">
-          <span>Contact Me</span>
+          <span><?= $translations['Contact Me'] ?></span>
         </div>
         <!-- 1st div -->
         <div class="adress_main">
           <div><i class="fa-solid fa-user icon"></i></div>
           <div class="adress">
-            <span>Gender</span>
+            <span><?= $translations['Gender'] ?></span>
             <p><?= ucfirst($data->per_info->gender) ?> </p>
           </div>
         </div>
         <div class="adress_main">
           <div><i class="fa-solid fa-location-dot icon"></i></div>
           <div class="adress">
-            <span>Adress</span>
+            <span><?= $translations['Adress'] ?></span>
             <p><?= ucfirst($data->per_info->country) ?>
               <?= ucfirst($data->per_info->city) ?></p>
           </div>
@@ -443,7 +443,7 @@
         <div class="web_main">
           <div><i class="fa-solid fa-globe icon"></i></div>
           <div class="world">
-            <span>web</span>
+            <span><?= $translations['web'] ?></span>
             <p style="word-break: break-all;"><?= ucfirst($data->per_info->email) ?><br> <?= ucfirst($data->per_info->website) ?></p>
           </div>
         </div>
@@ -451,7 +451,7 @@
         <div class="phone_main">
           <div><i class="fa-solid fa-phone icon"></i></div>
           <div class="world">
-            <span>phone</span>
+            <span><?= $translations['phone'] ?></span>
             <p><?= ucfirst($data->per_info->per_no) ?></p>
           </div>
         </div>
@@ -460,7 +460,7 @@
       <!-- skills sections -->
       <section class="skills_main">
         <div class="skills_title">
-          <span>skills Pro</span>
+          <span><?= $translations['Skills'] ?></span>
         </div>
 
         <div class="skills_bar">
@@ -497,7 +497,7 @@
       <!-- hobbies section -->
       <section class="hobbies_main">
         <div class="skills_title">
-          <span>hobbies</span>
+          <span><?= $translations['Hobbies'] ?></span>
         </div>
         <div class="hobbies_list">
           <ul>

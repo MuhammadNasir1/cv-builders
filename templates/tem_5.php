@@ -119,7 +119,7 @@
                 <i class="fa-solid fa-user" style="font-size: 24px;margin-left:20px"></i>
               </div>
               <div>
-                <h2 style="text-transform: uppercase">Profile</h2>
+                <h2 style="text-transform: uppercase"><?= $translations['Profile'] ?></h2>
               </div>
             </div>
             <div>
@@ -150,7 +150,7 @@
                 <i class="fa-solid fa-phone" style="font-size: 30px"></i>
               </div>
               <div>
-                <h1 style="text-transform: uppercase">contact</h1>
+                <h1 style="text-transform: uppercase"><?= $translations['contact'] ?></h1>
               </div>
             </div>
           </div>
@@ -169,10 +169,10 @@
                   flex-direction: column;
                   gap: 20px;
                 ">
-              <h3>Gender</h3>
-              <h3>phone</h3>
-              <h3>email</h3>
-              <h3>Adress</h3>
+              <h3><?= $translations['Gender'] ?></h3>
+              <h3><?= $translations['phone'] ?></h3>
+              <h3><?= $translations['email'] ?></h3>
+              <h3><?= $translations['Adress'] ?></h3>
             </div>
             <div style="
                   display: flex;
@@ -207,7 +207,7 @@
                 <i class="fa-solid fa-phone" style="font-size: 24px; margin-left:20px"></i>
               </div>
               <div>
-                <h2 style="text-transform: uppercase">hobbies</h2>
+                <h2 style="text-transform: uppercase"><?= $translations['Hobbies'] ?></h2>
               </div>
 
             </div>
@@ -262,7 +262,7 @@
                 <i class="fa-solid fa-graduation-cap" style="font-size: 24px; color: aquamarine;margin-left:20px;"></i>
               </div>
               <div>
-                <h2 style="text-transform: uppercase">education</h2>
+                <h2 style="text-transform: uppercase"><?= $translations['Education'] ?></h2>
               </div>
             </div>
           </div>
@@ -330,7 +330,7 @@
                 <i class="fa-solid fa-graduation-cap" style="font-size: 24px; color: aquamarine; margin-left:20px"></i>
               </div>
               <div>
-                <h2 style="text-transform: uppercase">experience</h2>
+                <h2 style="text-transform: uppercase"><?= $translations['experience'] ?></h2>
               </div>
             </div>
           </div>
@@ -399,7 +399,7 @@
                 <i class="fa-solid fa-phone" style="font-size: 24px; font-size: 24px; color: aquamarine; margin-left:20px;"></i>
               </div>
               <div>
-                <h2 style="text-transform: uppercase">skills</h2>
+                <h2 style="text-transform: uppercase"><?= $translations['Skills'] ?></h2>
               </div>
             </div>
           </div>

@@ -211,7 +211,7 @@
                 <div class="content">
                     <div>
                         <div class="heading">
-                            <h5><i class="fa-solid fa-address-book"></i> Contact</h5>
+                            <h5><i class="fa-solid fa-address-book"></i> <?= $translations['Contact'] ?></h5>
                         </div>
                         <div class="per-info">
                             <div class="icon-sec">
@@ -246,7 +246,7 @@
 
                     <div class="edu-sec">
                         <div class="heading">
-                            <h5><i class="fa-solid fa-person-digging"></i>Skills</h5>
+                            <h5><i class="fa-solid fa-person-digging"></i><?= $translations['Skills'] ?></h5>
                         </div>
 
                         <div class="skill">
@@ -267,7 +267,7 @@
 
                     <div class="edu-sec">
                         <div class="heading">
-                            <h5><i class="fa-solid fa-language"></i>Language</h5>
+                            <h5><i class="fa-solid fa-language"></i><?= $translations['Language'] ?></h5>
                         </div>
 
                         <div class="skill">
@@ -288,7 +288,7 @@
 
                     <div class="edu-sec">
                         <div class="heading">
-                            <h5><i class="fa-solid fa-people-robbery"></i>Hobbies</h5>
+                            <h5><i class="fa-solid fa-people-robbery"></i><?= $translations['Hobbies'] ?></h5>
                         </div>
 
                         <div class="skill">
@@ -312,7 +312,7 @@
                     ?>
                         <div class="edu-sec">
                             <div class="heading">
-                                <h5><i class="fa-solid fa-person-rays"></i>Reference</h5>
+                                <h5><i class="fa-solid fa-person-rays"></i><?= $translations['Reference'] ?></h5>
                             </div>
 
                             <div class="skill">
@@ -358,7 +358,7 @@
                 <div class="sec-heading">
                     <div>
                         <div class="heading">
-                            <h3><i class="fa-solid fa-user"></i> About Us</h3>
+                            <h3><i class="fa-solid fa-user"></i> <?= $translations['About Us'] ?></h3>
                         </div>
                         <div class="ab-info">
                             <p> <?= ucfirst($data->per_info->about_us) ?></p>
@@ -367,7 +367,7 @@
 
                     <div class="edu-section">
                         <div class="heading">
-                            <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                            <h3><i class="fa-solid fa-graduation-cap"></i> <?= $translations['Education'] ?></h3>
                         </div>
                         <?php
                         for ($i = 0; $i < count($data->education); $i++) {
@@ -395,7 +395,7 @@
 
                     <div class="edu-section">
                         <div class="heading">
-                            <h3><i class="fa-solid fa-briefcase"></i> Work Experience </h3>
+                            <h3><i class="fa-solid fa-briefcase"></i>  <?= $translations['Work Experience'] ?></h3>
                         </div>
                         <?php
                         for ($i = 0; $i < count($data->work_exp); $i++) {

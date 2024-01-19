@@ -223,7 +223,7 @@
         <!-- ====perinfo===== -->
         <div>
           <div class="heading">
-            <h5>Contact</h5>
+            <h5><?= $translations['Contact'] ?></h5>
           </div>
           <div class="per-info">
             <div class="icon-sec">
@@ -260,7 +260,7 @@
         <!-- ====edu===== -->
         <div class="edu-sec">
           <div class="heading">
-            <h5>Education</h5>
+            <h5><?= $translations['Education'] ?></h5>
           </div>
           <?php
           for ($i = 0; $i < count($data->education); $i++) {
@@ -286,7 +286,7 @@
           <!-- ====skill===== -->
           <div class="edu-sec">
             <div class="heading">
-              <h5>Skills</h5>
+              <h5><?= $translations['Skills'] ?></h5>
             </div>
 
             <div class="skill">
@@ -308,7 +308,7 @@
           <!-- ====hobbois===== -->
           <div class="edu-sec">
             <div class="heading">
-              <h5>Hobbies</h5>
+              <h5><?= $translations['Hobbies'] ?></h5>
             </div>
 
             <div class="skill">
@@ -330,7 +330,7 @@
           <!-- ====language===== -->
           <div class="edu-sec">
             <div class="heading">
-              <h5>Language</h5>
+              <h5><?= $translations['Language'] ?></h5>
             </div>
 
             <div class="lan">
@@ -362,7 +362,7 @@
       <div class="sec-heading">
         <div>
           <div class="heading">
-            <h3>About Me</h3>
+            <h3><?= $translations['About Me'] ?></h3>
           </div>
           <div class="ab-info">
             <p> <?= ucfirst($data->per_info->about_us) ?></p>
@@ -371,7 +371,7 @@
 
         <div>
           <div class="heading">
-            <h3>Work Experience</h3>
+            <h3><?= $translations['Work Experience'] ?></h3>
           </div>
           <?php
           for ($i = 0; $i < count($data->work_exp); $i++) {
@@ -400,7 +400,7 @@
         ?>
           <div>
             <div class="heading">
-              <h3>References</h3>
+              <h3><?= $translations['References'] ?></h3>
             </div>
             <div class="work-info">
               <ul class="reference-sec">

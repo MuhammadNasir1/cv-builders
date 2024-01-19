@@ -218,7 +218,7 @@
       <!-- ABOUT -->
       <div class="about">
         <div class="about_inner">
-          <span>About Me</span>
+          <span><?= $translations['About Me'] ?></span>
           <p> <?= ucfirst($data->per_info->about_us) ?></p>
         </div>
       </div>
@@ -248,7 +248,7 @@
       <!-- Languages -->
       <div class="Languages">
         <div class="lang_inner">
-          <h1 class="blue">Language</h1>
+          <h1 class="blue"><?= $translations['Language'] ?></h1>
           <div class="un-list">
             <ul>
               <?php
@@ -269,7 +269,7 @@
       <div class="Expertise">
 
         <div class="lang_inner">
-          <h1 class="blue">Expertise</h1>
+          <h1 class="blue"><?= $translations['Expertise'] ?></h1>
           <div>
             <ul class="un-list">
               <?php
@@ -290,7 +290,7 @@
       <div class="Expertise">
 
         <div class="lang_inner">
-          <h1 class="blue">Hobbies</h1>
+          <h1 class="blue"><?= $translations['Hobbies'] ?></h1>
           <div class="un-list">
             <ul>
               <?php
@@ -318,7 +318,7 @@
       <!-- Experience -->
       <div>
         <div class="Experience">
-          <h1 class="blue">Work Experience</h1>
+          <h1 class="blue"><?= $translations['Work Experience'] ?></h1>
           <div class="exp_main">
             <?php
             for ($i = 0; $i < count($data->work_exp); $i++) {
@@ -349,7 +349,7 @@
       <!-- Education -->
       <div>
         <div class="education">
-          <h1 class="blue">Education</h1>
+          <h1 class="blue"><?= $translations['Education'] ?></h1>
           <div class="edu_main">
             <?php
             for ($i = 0; $i < count($data->education); $i++) {

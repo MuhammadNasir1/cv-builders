@@ -20,6 +20,23 @@ if (isset($_GET['pre'])) {
 include_once('./includes/db.php');
 $sql = "SELECT * FROM `templetes`";
 $res = mysqli_query($conn, $sql);
+
+
+
+if (isset($_GET['lang'])) {
+  $_SESSION['lang'] = $_GET['lang'];
+  setcookie("lang",  $_GET['lang'], time() + (86400 * 365 * 10), "/");
+}
+if (isset($_COOKIE['lang'])) {
+  $currentLang = $_COOKIE['lang'];
+} else {
+  $currentLang = $_SESSION['lang'] ?? 'en';
+}
+if (isset($_GET['lang']) && $_GET['lang'] !== $currentLang) {
+}
+$langFile = "Languages/{$currentLang}.json";
+$translations = json_decode(file_get_contents($langFile), true);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,8 +98,8 @@ $res = mysqli_query($conn, $sql);
   </style>
 
   <div class="topbox">
-    <a href="./personal_info" target="_parent"> <button class="editbtn"><i class="fa-solid fa-pencil"></i> Edit</button></a>
-    <button class="btns" id="downbtn">Download PDF</button>
+    <a href="./personal_info" target="_parent"> <button class="editbtn"><i class="fa-solid fa-pencil"></i><?= $translations['Edit'] ?> </button></a>
+    <button class="btns" id="downbtn"><?= $translations['Download PDF'] ?></button>
   </div>
 
 
@@ -101,7 +118,7 @@ $res = mysqli_query($conn, $sql);
   ?>
     <div class="selecthading">
       <div class="selecthading">
-        <h1>Please Select Template</h1>
+        <h1><?= $translations['We deliver a professional'] ?></h1>
       </div>
     <?php
   }

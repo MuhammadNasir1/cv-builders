@@ -190,7 +190,7 @@
   
   "Hobby": "Hobby",
   "Add Hobby": "Add Hobby",
-  "Language": "Language",
+  "Language": "Language",  
   "Add Language": "Add Language",
   "Reference": "Reference",
   "Add Reference": "Add Reference",
@@ -205,6 +205,29 @@
   "lanhublist4": "Highlight languages that are relevant to the job or industry you're applying for. If you're bilingual or multilingual, emphasize your language skills as they can be valuable assets.",
   "Include Upon Request": "Include Upon Request",
   "lanhublist5": "Instead of providing specific references on your CV or resume, simply state References  available upon request. This keeps your document concise and allows you to provide references when requested by the employer.",
+
+
+
+
+  "Edit": "Edit",
+  "Expertise": "Expertise",
+  "References": "References",
+  "phone": "phone",
+  "Contact Me": "Contact Me",
+  "web": "web",
+  "Adress": "Adress",
+  "Experience": "Experience",
+  "Hobbies": "Hobbies",
+  "Profile": "Profile",
+  "contact": "contact",
+  "Skills": "Skills",
+  "languages": "languages",
+  "experience": "experience",
+  "Phone No": "Phone No",
+  "email": "email",
+  "Work Experience": "Work Experience",
+  "Download PDF": "Download PDF",
+  "About Me": "About Me",
 
   
   "Show cv templates": "Show cv templates"

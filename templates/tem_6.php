@@ -1,7 +1,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;0,600;1,300&family=Poppins:wght@100;200&display=swap");
 
-      * {
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -42,7 +42,7 @@
       }
 
       .contact::before {
-        content: 'contact';
+        content: '<?= $translations['contact'] ?>';
         text-transform: uppercase;
         background-color: #e58e26;
         width: 90px;
@@ -58,7 +58,7 @@
       }
 
       .education::before {
-        content: 'education';
+        content: '<?= $translations['education'] ?>';
         text-transform: uppercase;
         font-size: 14px;
         background-color: #e58e26;
@@ -71,7 +71,7 @@
         left: -20px;
       }
       .hobby::before {
-        content: 'Hobbies';
+        content: '<?= $translations['Hobbies'] ?>';
         text-transform: uppercase;
         font-size: 14px;
         background-color: #e58e26;
@@ -136,15 +136,15 @@
               <!--  -->
               <div style="width: 90%; margin: 30px auto;" class="contact">
                 <div>
-                  <h3 style="text-align: justify; font-size: 13px;  font-weight: 400;padding-top: 70px; ">Email:</h3>
+                  <h3 style="text-align: justify; font-size: 13px;  font-weight: 400;padding-top: 70px; "><?= $translations['Email'] ?>:</h3>
                   <h3 class="editable" style="text-align: justify; font-size: 12px;  font-weight: 300; margin-top:4px">
                     <?= ucfirst($data->per_info->email) ?>
                   </h3>
-                  <h3 style="text-align: justify; font-size: 13px;  font-weight: 400; margin-top:12px">Phone No:</h3>
+                  <h3 style="text-align: justify; font-size: 13px;  font-weight: 400; margin-top:12px"><?= $translations['Phone No'] ?>:</h3>
                   <h3 class="editable" style="font-size: 12px; font-weight: 300; margin-top:4px"><?= ucfirst($data->per_info->per_no) ?></h3>
                 </div>
                 <div style="margin-top: 12px;">
-                  <h3 style="text-align: justify; font-size: 13px;  font-weight: 400;">Adress:</h3>
+                  <h3 style="text-align: justify; font-size: 13px;  font-weight: 400;"><?= $translations['Adress'] ?>:</h3>
                   <h3 class="editable" style="text-align: justify; font-size: 12px;  font-weight: 300; margin-top:4px">
                     <?= ucfirst($data->per_info->country) ?> <?= ucfirst($data->per_info->city) ?>
                   </h3>
@@ -230,7 +230,7 @@
             <!--  -->
             <div style=" width: 90%; margin: 0 auto; margin-top: 70px;  padding-left: 20px;">
               <div class="heading">
-                <h1 style="text-transform: uppercase; font-size: 20px;"> experience</h1>
+                <h1 style="text-transform: uppercase; font-size: 20px;"><?= $translations['experience'] ?> </h1>
 
               </div>
 
@@ -266,7 +266,7 @@
             <!--  -->
             <div style=" width: 90%; margin: 0 auto; margin-top: 70px;  padding-left: 20px;">
               <div class="heading">
-                <h1 style="text-transform: uppercase; font-size: 20px;">languages</h1>
+                <h1 style="text-transform: uppercase; font-size: 20px;"><?= $translations['languages'] ?></h1>
 
               </div>
 
@@ -300,7 +300,7 @@
 
             <div style=" width: 90%; margin: 0 auto; margin-top: 70px;  padding-left: 20px;">
               <div class="heading">
-                <h1 style="text-transform: uppercase; font-size: 20px;">skills</h1>
+                <h1 style="text-transform: uppercase; font-size: 20px;"><?= $translations['Skills'] ?></h1>
 
               </div>
 
