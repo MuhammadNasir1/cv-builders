@@ -358,7 +358,7 @@
                 <div class="sec-heading">
                     <div>
                         <div class="heading">
-                            <h3><i class="fa-solid fa-user"></i> <?= $translations['About Us'] ?></h3>
+                            <h3><i class="fa-solid fa-user"></i> <?= $translations['About Me'] ?></h3>
                         </div>
                         <div class="ab-info">
                             <p> <?= ucfirst($data->per_info->about_us) ?></p>

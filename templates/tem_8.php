@@ -88,7 +88,7 @@
               <!-- 3rd -->
               <div style="display: flex; gap: 10px;">
                 <div><i class="fa-solid fa-home" style="color: #fbc531;"></i></div>
-                <div style="font-weight: 300; font-size: 14px;">><?= ucfirst($data->per_info->country) ?>
+                <div style="font-weight: 300; font-size: 14px;"><?= ucfirst($data->per_info->country) ?>
                   <?= ucfirst($data->per_info->city) ?></div>
               </div>
 
