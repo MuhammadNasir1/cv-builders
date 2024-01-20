@@ -1,7 +1,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;0,600;1,300&family=Poppins:wght@100;200&display=swap");
 
-    * {
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -70,6 +70,7 @@
         padding: 10px;
         left: -20px;
       }
+
       .hobby::before {
         content: '<?= $translations['Hobbies'] ?>';
         text-transform: uppercase;
@@ -180,22 +181,21 @@
               </div>
 
 
-           <!--  -->
-           <div style="width: 90%; margin: 30px auto;" class="hobby">
+              <!--  -->
+              <div style="width: 90%; margin: 30px auto;" class="hobby">
                 <div style="padding-top: 60px;">
-                 <ul>
-                 <?php
-                for ($i = 0; $i < count($data->hobbies); $i++) {
-                ?>
-                  <li style="font-size:16px;margin:10px 0 0  20px;"><?= ucfirst($data->hobbies[$i]->hobby) ?></li>
-                  <?php
-                }
-                ?>
-                 </ul>
+                  <ul>
+                    <?php
+                    for ($i = 0; $i < count($data->hobbies); $i++) {
+                    ?>
+                      <li style="font-size:16px;margin:10px 0 0  20px;"><?= ucfirst($data->hobbies[$i]->hobby) ?></li>
+                    <?php
+                    }
+                    ?>
+                  </ul>
                 </div>
               </div>
-            </div
-            >
+            </div>
           </section>
           <section style="position: relative;">
 
