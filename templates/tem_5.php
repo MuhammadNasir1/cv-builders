@@ -355,7 +355,7 @@
                 <div style=" display: flex; flex-direction: column; gap: 15px; ">
                   <div style="display: flex; flex-direction: column;gap: 5px;">
                     <div>
-                      <h3 style="text-transform: uppercase; font-size: 12px;"><?= ucfirst($data->work_exp[$i]->company_name) ?> / <?= date(" M Y ", strtotime($data->work_exp[$i]->work_st_data)) ?> - <?= $wenddata ?> </h3>
+                      <h3 style="text-transform: uppercase; font-size: 12px;"><?= ucwords($data->work_exp[$i]->role) ?> / <?= date(" M Y ", strtotime($data->work_exp[$i]->work_st_data)) ?> - <?= $wenddata ?> </h3>
                     </div>
                     <div>
                       <h2 style="text-transform: uppercase; font-size: 12px;"><?= ucfirst($data->work_exp[$i]->company_name) ?></h2>

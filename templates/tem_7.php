@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: montserrat;
+    font-family: 'Montserrat', sans-serif;
   }
 
 
@@ -109,7 +109,7 @@
           </div>
           <div>
             <h1 style="text-transform: uppercase; font-size: 18px">
-              conatct me
+            <?= $translations['contact'] ?>
             </h1>
           </div>
         </div>
@@ -160,7 +160,7 @@
           </div>
           <div>
             <h1 style="text-transform: uppercase; font-size: 18px">
-              conatct me
+             <?= $translations['Education'] ?>
             </h1>
           </div>
         </div>
@@ -220,7 +220,7 @@
         </div>
         <div>
           <h1 style="text-transform: uppercase; font-size: 18px">
-            about me
+           <?= $translations['About Me'] ?>
           </h1>
         </div>
       </div>
@@ -254,7 +254,7 @@
         </div>
         <div>
           <h1 style="text-transform: uppercase; font-size: 18px">
-            job experience
+            <?= $translations['Work Experience'] ?>
           </h1>
         </div>
       </div>
@@ -315,7 +315,7 @@
         </div>
         <div>
           <h1 style="text-transform: uppercase; font-size: 18px">
-            skills
+          <?= $translations['Skills'] ?>
           </h1>
         </div>
       </div>
@@ -385,7 +385,7 @@
             </div>
             <div>
               <h1 style="text-transform: uppercase; font-size: 18px">
-                language
+              <?= $translations['Language'] ?>
               </h1>
             </div>
           </div>
@@ -430,7 +430,7 @@
             </div>
             <div>
               <h1 style="text-transform: uppercase; font-size: 18px">
-                hobbies
+              <?= $translations['Hobbies'] ?>
               </h1>
             </div>
           </div>
