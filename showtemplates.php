@@ -3,16 +3,17 @@ $title = "Templates";
 include('includes/header.php');
 include('includes/db.php');
 
-if (!$_SESSION['user_id']) {
-  header("location: index");
-}
 
 
 include('includes/navbar.php');
-$userid =  $_SESSION['user_id'];
-$sql = "SELECT * FROM `per_info` WHERE user_id = $userid";
-$result_tem = mysqli_query($conn, $sql);
-$row = mysqli_num_rows($result_tem);
+
+if (@$_SESSION['user_id']) {
+
+  $userid =  $_SESSION['user_id'];
+  $sql = "SELECT * FROM `per_info` WHERE user_id = $userid";
+  $result_tem = mysqli_query($conn, $sql);
+  $row = mysqli_num_rows($result_tem);
+}
 
 $q = "SELECT * FROM `templetes`";
 $r = mysqli_query($conn, $q);
@@ -30,11 +31,21 @@ $r = mysqli_query($conn, $q);
 </div>
 <div class="mt-4 edit-details-btn container-fluid  ">
   <?php
-  if ($row < 1) {
-  ?>
-    <a href="./personal_info" class="text-decoration-none"> <button class=" edit-details-btn me-3"> <i class='bx bxs-pencil'></i> <span class="ms-1">Create Cv</span></button></a>
+  if (@$_SESSION['user_id']) {
 
+    if ($row < 1) {
+  ?>
+      <a href="./personal_info" class="text-decoration-none"> <button class=" edit-details-btn me-3"> <i class='bx bxs-pencil'></i> <span class="ms-1">Create Cv</span></button></a>
+
+    <?php
+    }
+  } else {
+    ?>
+
+
+    <a href="./sign_in.php" class="text-decoration-none"> <button class=" edit-details-btn me-3"> <i class='bx bxs-pencil'></i> <span class="ms-1">Create Cv</span></button></a>
   <?php
+
   }
   ?>
 
@@ -50,26 +61,35 @@ $r = mysqli_query($conn, $q);
     ?>
       <div class=" col-md-4 col-lg-3">
         <?php
-        if ($row < 1) {
-        ?>
-          <a href="./personal_info">
-          <?php
-        } else {
-          ?>
-            <a href="getdata?pre=<?= $a ?>">
-            <?php
-          }
-            ?>
 
-            <div class="cv_templete_img mt-4">
-              <div style="width:90%">
-                <div class="temp_img ">
-                  <img src="./templates/tem-img/<?= $data['templete_img'] ?>" alt="image" loading="lazy">
-                  <h2 class="position-absolute"><?= $translations["select"] ?></h2>
+        if (@!$_SESSION['user_id']) {
+        ?>
+          <a href="./sign_in.php">
+            <?php
+          } else {
+
+
+            if ($row < 1) {
+            ?>
+              <a href="./personal_info">
+              <?php
+            } else {
+              ?>
+                <a href="getdata?pre=<?= $a ?>">
+              <?php
+            }
+          }
+              ?>
+
+              <div class="cv_templete_img mt-4">
+                <div style="width:90%">
+                  <div class="temp_img ">
+                    <img src="./templates/tem-img/<?= $data['templete_img'] ?>" alt="image" loading="lazy">
+                    <h2 class="position-absolute"><?= $translations["select"] ?></h2>
+                  </div>
                 </div>
               </div>
-            </div>
-            </a>
+                </a>
       </div>
     <?php
     endwhile;

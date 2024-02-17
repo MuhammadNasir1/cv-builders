@@ -1,6 +1,9 @@
 <?php
 $title = "Preview";
 include_once('./includes/db.php');
+if (@!$_SESSION['user_id']) {
+  header("location: index");
+}
 include_once('./includes/header.php');
 include_once('./includes/navbar.php');
 $res = mysqli_query($conn, "SELECT * FROM `templetes`");

@@ -1,11 +1,11 @@
 <!-- ================ Footer-Start ======================= -->
 
 
-<footer class="text-center text-lg-start text-white" style="background-color: black">
+<footer class="text-center text-lg-start text-white " style="background-color: black; margin-top:4rem">
   <section style="background-color: #C21010">
     <div class=" d-flex justify-content-between pe-3  ps-3">
       <div class="social-icon-heading">
-        <p><?= $translations['Our social media handles'] ?>:</p>
+        <p> <?= $translations['Our social media handles'] ?>:</p>
       </div>
       <div class="icons pt-1">
         <a href="#"><i class='bx bxl-facebook'></i></a>
@@ -15,76 +15,9 @@
       </div>
     </div>
   </section>
-  <section class="pt-1">
-    <div class="container text-center text-md-start mt-5">
-
-      <div class="row mt-3">
-
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-
-          <h6 class="text-uppercase fw-bold">CV Builders</h6>
-          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 80px; background-color:#C21010 ; height: 5px" />
-          <p>
-          <?= $translations['Create your CV in some simple steps. Just write your information, choose your favourite template and download it in pdf.'] ?>
-          </p>
-        </div>
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold"><?= $translations['Products'] ?></h6>
-          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 80px; background-color:#C21010 ; height: 5px" />
-          <p>
-            <a href="#!" class="text-white">CV Builders</a>
-          </p>
-          <p>
-            <a href="#!" class="text-white">..............</a>
-          </p>
-          <p>
-            <a href="#!" class="text-white">................</a>
-          </p>
-          <p>
-            <a href="#!" class="text-white">.....................</a>
-          </p>
-        </div>
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold"><?= $translations['Useful links'] ?></h6>
-          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 80px; background-color:#C21010 ; height: 5px" />
-          <p>
-            <a href="./contact" class="text-white"><?= $translations['Contact Us'] ?></a>
-          </p>
-          <p>
-            <?php
-            if (@$_SESSION["loginemail"]) {
-            ?>
-              <a href="" class="text-white"><?= $translations['Settings'] ?></a>
-
-            <?php
-            } else {
-            ?>
-              <a href="./sign_up" class="text-white"><?= $translations['Settings'] ?></a>
-            <?php
-
-            } ?>
-          </p>
-          <p>
-            <a href="./privacypolicy" class="text-white"><?= $translations['Privacy & Policy'] ?></a>
-          </p>
-
-        </div>
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <h6 class="text-uppercase fw-bold"><?= $translations['Contact'] ?></h6>
-          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 80px; background-color:#C21010 ; height: 5px" />
-          <p><i class="fas fa-home mr-3"></i> Faisalabad Punjab Pakistan</p>
-          <p><i class="fas fa-envelope mr-3"></i> <a href="mailto:info@cvbuilders.com">info@cvbuilders.com</a></p>
-          <p><i class="fas fa-phone mr-3"></i> <a href="tel:+923196631466">+ 92 3196631466</a></p>
-          <p><i class="fa-brands fa-whatsapp mr-3"></i><a href="https://wa.me/923196631466" target="_blank"> + 92 3196631466 </a></p>
-        </div>
-      </div>
-    </div>
-  </section>
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-    © 2024 <?= $translations['Copyright:The Product By'] ?>
-    <a class="text-white" href="https://thewebconcept.com/" target="_blank">thewebconcept.com</a>
+    © 2023 <?= $translations['Copyright:The Product By'] ?>
+    <a class="text-white" href="https://thewebconcept.com/">thewebconcept.com</a>
   </div>
 </footer>
-<!-- ================ Footer-End ======================= -->
+<!-- ============ Footer-End ======================= -->

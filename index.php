@@ -18,22 +18,21 @@ include('includes/navbar.php')
           <h1>
             <span class="typewrite" data-period="2000" data-type='[ " <?= $translations['CV'] ?>", " <?= $translations['Resume'] ?>" ]'>
               <span class="wrap"></span>
-            </span>  <?= $translations['For Free'] ?>
+            </span> <?= $translations['For Free'] ?>
           </h1>
           <p><?= $translations['Create your CV with different types of templates , color '] ?> <span class="heading_br"><br></span>
-             <?= $translations['combinations and customization'] ?></p>
+            <?= $translations['combinations and customization'] ?></p>
           <div>
+            <a href="./showtemplates"> <button> <?= $translations['Show templates'] ?></button></a>
             <?php
 
 
             if (@$_SESSION["loginemail"]) {
             ?>
-              <a href="./showtemplates"> <button> <?= $translations['Show templates'] ?></button></a>
               <a href="./personal_info"> <button class="cv-btn"> <?= $translations['Create Here'] ?></button></a>
             <?php
             } else {
             ?>
-              <a href="./sign_up"> <button> <?= $translations['Show templates'] ?></button></a>
               <a href="./sign_up"> <button class="cv-btn"><?= $translations['Create Here'] ?></button></a>
             <?php
             }
@@ -61,7 +60,7 @@ include('includes/navbar.php')
 
   <!-- =========== heading-Start ============  -->
   <div class="datails-sec">
-    <h3> <?= $translations['Create professional Resume or CV with'] ?>  <span>100+</span> <span class="remove"><br></span>  <?= $translations['templates and customize the'] ?> <span class="remove"><br></span>   <?= $translations['colors and fonts'] ?></h3>
+    <h3> <?= $translations['Create professional Resume or CV with'] ?> <span>100+</span> <span class="remove"><br></span> <?= $translations['templates and customize the'] ?> <span class="remove"><br></span> <?= $translations['colors and fonts'] ?></h3>
 
     <!-- =========== heading-End =============  -->
     <div class="container-fluid mt-5">
@@ -121,7 +120,7 @@ include('includes/navbar.php')
 <div class="container-fluid p-0 mt-4">
   <div class="fix-bg">
     <div class="txt">
-      <h1>"<?= $translations['Select your favourite template and create your'] ?> 
+      <h1>"<?= $translations['Select your favourite template and create your'] ?>
         <span class="remove"><br></span><?= $translations['professional CV or Resume.'] ?>
       </h1>
       <?php

@@ -307,15 +307,13 @@
     opacity: 0;
   }
 }
-
 @media (max-width:840px) {
   .progressbarss {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
-
+    margin-left: 40px;
   }
-
   .progress-sec p {
     justify-content: center;
   }
